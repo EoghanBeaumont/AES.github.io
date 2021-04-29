@@ -1,18 +1,73 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-     <head>
-	 <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- saved from url=(0060)https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {
+body, html {
+  height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
 }
 
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:0;
+
+}
+.bgimg-1 {
+  background-image: url("fade.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("fade.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("fade.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
 .nav {
   overflow: hidden;
-  background-color:#0000ff ;
+  background-color:#1e2027 ;
+  position: fixed;
+  z-index:1;
+  top: 0;
+  width: 100%;
+
 }
 
 .nav a {
@@ -56,25 +111,124 @@ ul {
   
   color: white;
 }
+.rectangle {
+  height: 57px;
+  width: 100%;
+  background-color: black;
+  position:fixed;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
 </style>
-          <title>My Website Title</title>
-     </head>
-     <body>
-	 <a href="index.html"><img border "0" img src="audio engineering society.jpg" alt="AesLogo" width="144" height="60"></a>
-	
-		  <nav>
+</head>
+<body>
+ <nav>
 		  <ul class="nav">
 		  <li><a href="index.html">News</a></li>
-		  <li><a href="about.html">About</a></li>
-		  <li><a href="events.html">Events</a></li>
-		  <li><a href="membership.html">Membership</a></li>
-		  <li><a href="students.html">Students</a></li>
-		  <li><a href="groups.html">Groups</a></li>
+		  <li><a href="#about">About</a></li>
+		  <li><a href="#events">Events</a></li>
+		  <li><a href="#membership">Membership</a></li>
+		  <li><a href="#students">Students</a></li>
+		  <li><a href="#groups">Groups</a></li>
 		   <li><a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a></li>
 	       <li><a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a></li>
 		  
 		  </ul>
 		  </nav>
-		  <h1>News</h1>
-     </body>
+		  <div class="rectangle"></div>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">SCROLL DOWN</span>
+  </div>
+</div>
+
+<div  style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Parallax Demo</h3>
+  <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+</div>
+
+<div class="bgimg-2"id="about">
+  <div class="caption">
+  <span class="border" style="background-color:blue;font-size:25px;color: ;">ABOUT</span>
+  </div>
+</div>
+<div class="rectangle"></div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-3"id="events">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">EVENTS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Event infomation.</p>
+  </div>
+</div>
+<div class="bgimg-3"id="membership">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">MEMBERSHIP</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Membership infomation.</p>
+  </div>
+</div>
+<div class="bgimg-3"id="students">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">STUDENTS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Students infomation.</p>
+  </div>
+</div>
+<div class="bgimg-3"id="groups">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">GROUPS</span>
+
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+  <h1>Dundalk Institute Of Technology</h1>
+  <img src="dkit.jpg" alt="dkit">
+  <p> DkIT is the focal point for higher education and research on the Belfast-Dublin corridor, serving the North Leinster, South Ulster region. Students and graduates are an important asset to this region and success is vital to its continued economic, social and cultural growth.</p>
+   <h1>Limerick Institute Of Technology</h1>
+  <img src="lit.jpg" alt="lit">
+  <p> Limerick Institute of Technology is home to over 6,500 students across vibrant campuses in Limerick city, Thurles, Clonmel and Ennis, offering lively and enjoyable student experiences. We are also currently developing a new state of the art engineering focussed campus at Coonagh in Limerick.</p>
+   <h1>Maynooth University</h1>
+  <img src="maynooth.jpg" alt="maynooth">
+  <p> Maynooth University is a thriving research enterprise, a vibrant and exciting place to learn, and importantly, is a university that places equal value on research and teaching.Maynooth engaged university with extensive research and teaching partnerships with enterprise, public bodies, civil society and community organisations.
+</p>
+   <h1>Trinity College Dublin</h1>
+  <img src="tcd.jpg" alt="tcd">
+  <p> Trinity College Dublin, the University of Dublin they provide a liberal environment where independence of thought is highly valued and all are encouraged to achieve their potential. Promoting a diverse, interdisciplinary, inclusive environment which nurtures ground-breaking research, innovation, and creativity through engaging with issues of global significance.</p>
+  <h1>University College Dublin</h1>
+  <img src="ucd.jpg" alt="ucd">
+  <p> UCD is one of Europe's leading research-intensive universities; an environment where undergraduate education, masters and PhD training, research, innovation and community engagement form a dynamic spectrum of activity.</p>
+  
+  </div>
+</div>
+
+
+
+
+</body>
 </html>
