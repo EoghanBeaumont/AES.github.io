@@ -11,7 +11,28 @@ body, html {
   color: #777;
 }
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
   opacity: 0.65;
@@ -28,6 +49,40 @@ h2 {
 h4{
 	border-bottom: 3px solid white;
 }
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: white;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  }
 .rectangle {
   height: 50px;
   width: 100px;
@@ -35,6 +90,20 @@ h4{
   position: relative;
   top:250px;
 }
+.button {
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#more {display: none;}
 
 .center {
   display: block;
@@ -69,11 +138,28 @@ h4{
 }
 
 .caption span.border {
-  background-color: #111;
+  background-color: #003d99;
   color: #fff;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 15%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 h3 {
@@ -83,10 +169,10 @@ h3 {
   color: #111;
 }
 
-.nav {
+.navbar {
   overflow: hidden;
-  background-color:#1e2027 ;
-  position: fixed;
+  background-color: #003d99;
+   position: fixed;
   z-index:1;
   top: 0;
   width: 100%;
@@ -94,31 +180,62 @@ h3 {
 
 }
 
-.nav a {
+.navbar a {
   float: left;
-  color: #f2f2f2;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.nav a:hover {
-  background-color: #6666ff;
-  color: black;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-.nav a.active {
-  background-color: #
-  color: white;
-}
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
+.dropdown .dropbtn {
+  font-size: 16px;  
   border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #003d99;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#more {display: none;}
+
 
 
 ul {
@@ -126,6 +243,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+ 
  .fa {
   font-size: 15px;
   text-align: center;
@@ -147,6 +265,7 @@ ul {
 p.outset {border-style: outset;}
 
 
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -158,22 +277,31 @@ p.outset {border-style: outset;}
 <body>
 
 
- <nav>
-		  <ul class="nav">
-		  <li><a href="#home"><img src="aeslogo.png" alt="aes"></a></li>
-		  <li><a href="#news">News</a></li>
-		  <li><a href="#about">About</a></li>
-		  <li><a href="#events">Events</a></li>
-		  <li><a href="#membership">Membership</a></li>
-		  <li><a href="#students">Students</a></li>
-		  <li><a href="#groups">Groups</a></li>
-		   <li><a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a></li>
-	       <li><a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a></li>
-		   <li><a href="https://www.aes.org/membership/ "target="_blank">Join AES</a></li>
-		  </ul>
-		  </nav>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+    <button class="dropbtn">About
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#about">about</a>
+      <a href="#community">AES IRELAND SECTION</a>
+      <a href="#volunteers">AES Ireland Volunteers</a>
+	  <a href="#past">AES Ireland Past Members</a>
+    </div>
+  </div>
+	<a href="#events">Events</a>
+		  <a href="#membership">Membership</a>
+		  <a href="#students">Students</a>
+		  <a href="#groups">Groups</a>
+		  <a href="#contact">Contact</a>
+		  <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
+	      <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
+		  <a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
+</div>
 
-<div style="position:relative;">
+<div style="position:relative;"id="home">
   <div style=";color:black;background-color:white;4;font-size:15px;text-align:center;padding:50px 80px;text-align: justify;">
 	<img src ="aesireland.png" alt="aesireland">
 	
@@ -184,13 +312,61 @@ p.outset {border-style: outset;}
 
 <div class="bgimg-2"id="news">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: ;">News</span>
+  <span class="border" style="background-color:#003d99;font-size:50px;color: ;">News</span>
   </div>
+</div>
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div>
+  <input type="checkbox" class="read-more-state" id="post-2" />
+
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">The Human Tuning Fork’ and AES Ireland AGM</li>
+	<li style="font-size:15px">29TH FEBRUARY 2020</li>
+	<img src="newstuningfork.jpg">
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: ‘The Human Tuning Fork’ and AES Ireland AGM</li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Fiona Smyth (Trinity College Dublin)</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: • Election of Officers</li>
+	<li class="read-more-target" style="font-size:15px">• Website and social media</li>
+	<li class="read-more-target" style="font-size:15px">• Treasurer’s report</li>
+	<li class="read-more-target" style="font-size:15px">• Meeting planning</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Seminar Room 1, Parsons Building, Trinity College Dublin</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">Dr. Fiona Smyth gave a talk on the first independent acoustic consultant in Britain or Ireland, Dublin-born architect Hope Bagenal (1888-1979). She described his life and work including Abbey Road studios, St. Paul’s Cathedral, the Assembly Chamber at Imperial Delhi, and Dublin’s Carleton Cinema. Hope Bagenal’s life story connects the disciplines of science, music, and architecture. Interestingly, music was part of his method of analysis and informally, he became known as ‘The Human Tuning Fork’.</li>
+  </ul>
+  
+  <label for="post-2" class="read-more-trigger"></label>
+</div>
+
+  <h4></h4>
+  <div>
+  <input type="checkbox" class="read-more-state" id="post-3" />
+   <ul class="read-more-wrap">
+    <li style="font-size:30px">Object-based Audio & Spatial Audio</li>
+	<li style="font-size:15px"> 20TH NOVEMBER 2019</li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: Object-based Audio & Spatial Audio/li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Alex Wilson (University of Huddersfield), Hugh O’Dwyer (Trinity College Dublin)</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Web presence, Treasurer report, Event Planning, Sponsorship, Diversity</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Trinity College Dublin, Dublin, Ireland</li>
+	<li class="read-more-target" style="font-size:15px">• Treasurer’s report</li>
+	<li class="read-more-target" style="font-size:15px">• Meeting planning</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Seminar Room 1, Parsons Building, Trinity College Dublin</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">Alex Wilson began the meeting with a lecture entitled “Listener-centric design of audio systems: adapting playback to users’ needs and preferences”. Alex first introduced concepts related to object-based audio delivery along with potential benefits to the user, and challenges to the system designers. The design and evaluation of an interactive audio renderer was then discussed. He explained that the system explored in the lecture was designed to allow the creation of personalised audio mixes based on feedback from the user. Applications for this proof-of-concept were then discussed.</li>
+	<li class="read-more-target" style="font-size:15px">Hugh O’Dwyer’s lecture, entitled “Novel Methods for the Analysis and Assessment of Spatial Audio”, focused on three primary topics. He first described a comparative study evaluating the perceived quality of Ambisonic microphones assessed using subjective listening tests of recordings and a directional encoding analysis of the B-format signals. He then discussed two virtual headphone testing methodologies demonstrating the validity of presenting headphone recordings, and stimuli filtered using headphone transfer functions, to assess the quality of headphones. Lastly, he explained how deep neural networks can be used to model sound source localization (elevation and distance) in binaural signals.</li>
+  </ul>
+  <label for="post-3" class="read-more-trigger"></label>
+  </div>
+  <h4></h4>
+  
+  
 </div>
 
 <div class="bgimg-2"id="about">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: ;">ABOUT</span>
+  <span class="border" style="background-color:#003d99;font-size:50px;color: ;">ABOUT</span>
   </div>
 </div>
 
@@ -221,6 +397,94 @@ p.outset {border-style: outset;}
   </div>
 </div>
 
+
+<div class="bgimg-2"id="community">
+  <div class="caption">
+  <span class="border" style="background-color:#003d99;font-size:50px;color: ;">AES IRELAND SECTION</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+	<h1>AES Ireland Section Committee</h1>
+	<p>The AES Ireland Section committee work on a purely voluntary basis to run the events, activities and campaigns of the section. They work in a wide range of audio related commercial businesses and academia.</p>
+	<img src ="FlaithriNeff.jpg">
+	<p style="font-weight: bold;">Flaithri Neff – Chair</p>
+	<p>Dr Flaithri Neff is a lecturer in Audio DSP and Acoustics at the Limerick Institute of Technology. He holds a MSc in Music Technology (University of Limerick) and a PhD in Computer Science (University College Cork). He established the Interactive Systems Research Group (ISRG) to bring together LIT researchers who are interested in modelling the auditory perceptual system with the aim of developing sonification applications for multimodal interfaces. Having an interest in audio standards, he is also MPEG Convenor of TC 02/SC 03/WG 01, a NSAI mirror committee of ISO/IEC JTC 1/SC 29/WG 11.</p>
+	<p>He is a musician and composer, and has performed internationally with Riverdance, the Afro Celt Sound System, the Royal Scottish National Symphony Orchestra, and for various film projects.</p>
+	<h4></h4>
+	<img src ="JoeTimoney.jpg">
+	<p style="font-weight: bold;">Joe Timoney – Vice-Chair</p>
+	<p>Dr Joe Timoney completed his PhD in Electronic Engineering at TCD, Ireland in 1998. He joined the Dept. of Computer Science at Maynooth University in the following year. He teaches on undergraduate programs in Computer Science and in Music Technology. His research interests are based in the area of audio signal processing, with a focus on musical sound synthesis and the digital modelling of analogue subtractive synthesizers. He is also a DIY electronics enthusiast and has participated in a number of national Maker Fairs as part of the Maynooth University club. He has a member of the Audio Engineering Society for over 10 years.</p>
+	<h4></h4>
+	<img src ="MalachyRonan.jpg">
+	<p style="font-weight: bold;">Malachy Ronan – Secretary Position</p>
+	<p>Dr. Malachy Ronan is an Assistant Lecturer at the Limerick Institute of Technology. He holds MSc in Music Technology and PhD in Perception and Audio Engineering degrees from the University of Limerick. A member of the AES since 2014, he has disseminated research at various AES outlets and is co-chair for student volunteers at AES 146. Current research interests include perception and signal processing.</p>
+	<h4></h4>
+	<p style="font-weight: bold;">Andrew Hines - Committee Member</p>
+	<p>Dr Hines is an assistant professor in the School of Computer Science at University College Dublin. His primary research interests are in speech, audio and video signal processing. He has active research collaborations applying machine learning models to health applications and cryptosystems. He has developed computational metrics for estimating speech and audio quality as well as for predicting speech intelligibility for people with hearing impairments. Recent work has looked at predicting quality and location accuracy for spatial audio. Dr Hines is a funded investigator in both the SFI CONNECT research centre for future networks and INSIGHT research centre for data analytics. He has represented Ireland on the management committee of Qualinet, an FP7 European COST Action, where he led a task force focused on using machine learning to develop Quality of Experience (QoE) models. He is a senior member of the IEEE, member of the AES. He is facilities chair for the AES146 convention in Dublin in 2019, publicity chair for ACM MMVE 2019 and general chair for IEEE QoMEX 2020.</p>
+	<h4></h4>
+	<p style="font-weight: bold;">Alex Wilson - Committee Member</p>
+	<p>Alex Wilson is currently a postdoctoral research fellow in the Acoustics Research Centre at the University of Salford, investigating the perception of object-based audio technologies while teaching digital signal processing. He received a PhD from the same institution in 2017, which covered the areas of audio quality, popular music, accessibility and automated mixing, and has produced three papers for the Journal of the AES. He was the co-chair and organiser of the 3rd Workshop on Intelligent Music Production and has contributed to conferences and workshops organised by the UK section of the AES. A native of Dublin, in a past life, he studied experimental physics at Maynooth University while recording excessive amounts of music in a bedroom studio.</p>
+	<h4></h4>
+	<p style="font-weight: bold;">Brian Hunt- Committee Member</p>
+	<p>Studied Telecommunications in Kevin Street 1974-1978. Joined BBC TV London in 1978 working in Special Projects, Studio Engineering.  Work included delivering programme focussed communications facilities for General Elections, Budget programmes, Children in Need, Royal Wedding, Olympic Games and other major sporting events.  In 1989, joined the BBC TV’s capital projects department called P&ID Tel.  Work involved planning and designing replacement studio infrastructure.  Responsible for designing the replacement DTMF signalling system that replaced the old 17 Hz control line system throughout the BBC.  This required the new equipment to be BABT tested prior to use. In 1992, became the regional manager in Sligo and the NW for a company involved with digital TV EU projects, MMDS and cable TV.  In 1995, set up AVA Systems to offer broadcast, audio visual engineering services and acoustic consultancy and design.</p>
+	<h4></h4>
+	<img src ="PheobeSun.png">
+	<p style="font-weight: bold;">Pheobe Sun- Committee Member</p>
+	<p>Pheobe Sun is a PhD candidate in audio and speech quality of experience at the QxLab research group in the School of Computer Science at University College Dublin, with an emphasis on the cognitive-perceptual experience. She obtained her primary degree and master’s degree from Trinity College Dublin. She is also an interactive installation artist and a social experiment designer. Her previous research piece was carried out at the exhibition ‘Intimacy’ in Science Gallery Dublin.</p>
+	<h4></h4>
+	<img src ="RonanODea.jpg">
+	<p style="font-weight: bold;">Ronan O'Dea- Committee Member</p>
+	<p>Ronan O’Dea is a post-graduate researcher at the Limerick Institute of Technology. He holds a BSc in Music Technology and Production awarded by the Limerick Institute of Technology. He is an active member of the Interactive Systems Research Group (ISRG) with an interest in psychoacoustics and human-computer interaction. He is currently pursuing a PhD with aim to evaluate the perception of reverberant auditory cues embedded within multimodal interfaces. He is a committe member of TC 02/SC 03/WG 01, a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
+	<h4></h4>
+	<img src ="RokaiaJedir.jpg">
+	<p style="font-weight: bold;">Rokaia Jedir- Committee Member</p>
+	<p>Rokaia Jedir is a postgraduate researcher at the Interactive Systems Research Group (ISRG), Limerick Institute of Technology. In 2018 she graduated with a first-class honours BSc degree in Music Technology & Production, and is currently pursuing a MSc degree with intentions to transfer to PhD in 2020. Her primary research interests include psychoacoustics, working memory, and human-computer interaction in general. Currently, her research is dedicated to developing a computational model of human working memory (WM) as applied to the auditory perceptual system, aimed at contributing to the development of next-generation multimodal interface design. She is a committee member of TC 02/SC 03/WG 01, a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
+	<h4></h4>
+	<img src="JoeFitzpatrick.png">
+	<p style="font-weight: bold;">Joe Fitzpatrick – Committee Member</p>
+	<p>Joe Fitzpatrick is currently a postgraduate researcher and a member of the Interactive Systems Research Group in Limerick Institute of Technology. He is currently concluding a PhD exploring how the principles of human auditory perception and Auditory Scene Analysis can be used in the design stages of sonification. Beyond this, he has worked with various small to medium enterprises as an audio consultant which has involved prototyping listening devices, extracting data from audio, and facilitating both qualitative and quantitative user-studies.</p>
+		</div>
+</div>
+<div class="bgimg-2"id="volunteers">
+  <div class="caption">
+  <span class="border" style="background-color:black;font-size:50px;color: ;">AES IRELAND Volunteers</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+	<h1>AES Ireland Section Volunteers</h1>
+	<p>The Irish Chapter of the Audio Engineering Society is totally run by volunteers. Alongside the committee and the regional group chairs we rely on a wide team of amazing volunteers to run our events and activities.</p>
+	<h4></h4>
+	<p style="font-weight: bold;">Michael Oyetunde</p>
+	<p>Michael Oyetunde is a fourth year Computer Science and Software Engineering student who volunteered to help assist with the current AES Ireland website.</p>
+	<h4></h4>
+	<p style="font-weight: bold;">Brain Hunt</p>
+	<p>Studied Telecommunications in Kevin Street 1974-1978. Joined BBC TV London in 1978 working in Special Projects, Studio Engineering.  Work included delivering programme focussed communications facilities for General Elections, Budget programmes, Children in Need, Royal Wedding, Olympic Games and other major sporting events.  In 1989, joined the BBC TV’s capital projects department called P&ID Tel.  Work involved planning and designing replacement studio infrastructure.  Responsible for designing the replacement DTMF signalling system that replaced the old 17 Hz control line system throughout the BBC.  This required the new equipment to be BABT tested prior to use. In 1992, became the regional manager in Sligo and the NW for a company involved with digital TV EU projects, MMDS and cable TV.  In 1995, set up AVA Systems to offer broadcast, audio visual engineering services and acoustic consultancy and design.</p>
+	<h4></h4>
+	 </div>
+</div>
+<div class="bgimg-2"id="past">
+  <div class="caption">
+  <span class="border" style="background-color:black;font-size:50px;color: ;">AES IRELAND Volunteers</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+	<h1>Past Committee Members</h1>
+	<p>We are indebted to our past committee members for providing guidance, leadership and direction for the AES Ireland Section over the years.</p>
+	<img src="EndaBates.jpg">
+	<p style="font-weight: bold;">Enda Bates - Treasurer</p>
+	<p>Dr Enda Bates is a composer, musician, producer and academic based in Dublin, Ireland, and an Assistant Professor and deputy director of the Music and Media Technologies programme in Trinity College Dublin. He obtained a B. Eng. in Electronic Engineering from Dublin City University in 2000, an M. Phil. In Music & Media Technologies from Trinity College Dublin in 2004, and in 2010 he completed a PhD at Trinity College Dublin entitled The Composition & Performance of Spatial Music. Current research interests include spatial audio, psychoacoustics, the aesthetics of electroacoustic music, and the augmented electric guitar. He is an active composer and performer, and a founder member of the Spatial Music Collective, and is currently on the organizing committee for the 146th AES Convention to be held in Dublin in March 2019.</p>
+	<h4></h4>
+	
+	
+	</div>
+</div>
+
 <div class="bgimg-3"id="events">
   <div class="caption">
   <span class="border" style="background-color:black;font-size:50px;color: #f7f7f7;">EVENTS</span>
@@ -234,13 +498,102 @@ p.outset {border-style: outset;}
 </div>
 <div class="bgimg-3"id="membership">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:25px;color: #f7f7f7;">MEMBERSHIP</span>
+  <span class="border" style="background-color:black;font-size:25px;color:blue;">MEMBERSHIP
+  </span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Membership infomation.</p>
+  <div style="color:#ddd;background-color:white;text-align:center;padding:50px 80px;text-align: justify;color:black;">
+	<img src="aesmembers.png">
+	<p>A Member may be anyone active in audio engineering or acoustics who has an academic degree or the equivalent in scientific or professional experience in audio engineering and its allied arts and is familiar with the application of engineering principles and data in that field.
+	<br>
+	An Associate Member may be anyone who has an interest in audio engineering and in the society objectives, but who does not yet have the degree or the equivalent in professional experience required of a Member. Associate membership includes all the privileges except voting, holding office or chairmanships.
+	<br>
+	A Student Member may be anyone interested in audio who is enrolled in a recognized school, college or university. As with Associate Members, Student Members may not vote or serve on committees except in a local chapter.</p>
+		<h1>Membership Benefits and Features of the AES</h1>
+		<p>	•Meet and talk with other members of the audio industry
+		<br>•Receive the Journal of the AES and electronic news regularly
+		<br>•Learn directly from recognized experts in the audio field
+		<br>•Find out the most up-to-date products in the market
+		<br>•Have access to the latest developments by researchers
+		<br>•Participate in local section meetings, workshops, and discussion forums
+		<br>•Receive discounts on events and publications
+		<br>•For students: the AES is the perfect complement to your education
+		<br>•Workshops
+		<br>•Tutorials
+		<br>•Masterclasses
+		<br>•Student recording and design competitions
+		<br>•Papers
+		<br>•Exhibitor seminars
+		<br>•Over 14,000 members worldwide
+		<br>•77 professional sections worldwide
+		<br>•99 student sections worldwide
+		<br>•Annual North American convention
+		<br>•Annual European convention
+		<br>•Regional conventions and conferences
+		<h4></h4>
+		<h1>Sustaining Members</h1>
+		<p>To maintain and improve the structure of the AES, the AES is supported financially by Sustaining Members throughout the world.</p>
+		<p>To maintain and improve the structure of the AES, the AES is supported financially by Sustaining Members throughout the world. The UK Section is supported by a cross-section of UK based companies whose contributions are vital in ensuring that the UK Section continues its role within the AES.
+		<br>
+		Sustaining Membership is available to organizations in communications, manufacturing, research and allied areas of the audio and acoustic fields. Sustaining Members help support the society through contributions and receive recognition in the Journal of the Audio Engineering Society (JAES), at all AES technical meetings and at aes.org.</p>
+		<h4></h4>
+		<h1> Benefits available to Sustaining Members</h1>
+		<p>•Free AES Journal 10 times a year
+		<br>•Monthly listing in the AES Journal
+		<br>•Links from the AES UK and International AES websites
+		<br>•Company profile and listing on the International AES website
+		<br>•Company profile annually in the AES Journal
+		<br>•10% off all advertisements in the AES Journal
+		<br>•AES convention registration fees at member rates for all employees of Sustaining Member companies
+		<br>•Free roving passes for Sustaining Members exhibiting at AES conventions
+		<br>•Sustaining Member exhibitors highlighted in AES exhibition guides
+		<br>•Free copies of UK conference proceedings
+		<br>•Free recruitment and equipment advertising in UK Section Newsletter
+		<br>•Free recruitment advertising on <a href="https://www.aes.org/jobs/">International</a>AES website
+		<p>Click <a href="https://secure.aes.org/sustaining/">here </a> for further information about how to become a Sustaining Member.</p>
+		<h4></h4>
+		
+  </div>
+</div>
+<div class="row"> 
+  <div class="column">
+  <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image" style="width:50%">
+ <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" style="width:50%">
+ <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" style="width:50%">
+  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" style="width:50%">
+  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" style="width:50%">
+  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" style="width:50%">
+  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" style="width:50%">
+  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" style="width:50%">
+  </div>
+  <div class="column">
+  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" style="width:50%">
+  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png"style="width:50%">
+  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" style="width:50%">
+  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" style="width:50%">
+  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" style="width:50%">
+  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" style="width:50%">
+  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" style="width:50%">
+  </div>  
+  <div class="column">
+  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" style="width:50%">
+  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" style="width:50%">
+  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" style="width:50%">
+  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" style="width:50%">
+  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" style="width:50%">
+  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" style="width:50%">
+  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" style="width:50%">
+  </div>
+  <div class="column">
+  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" style="width:50%">
+  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png"style="width:50%">
+  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" style="width:50%">
+  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" style="width:50%">
+  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" style="width:50%">
+  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" style="width:50%">
+  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" style="width:50%">
   </div>
 </div>
 <div class="bgimg-3"id="students">
@@ -299,7 +652,33 @@ For details of student member benefits please go <a href="https://www.aes.org/st
   
   </div>
 </div>
+<div class="bgimg-3"id="contact">
+  <div class="caption">
+  <span class="border" style="background-color:black;font-size:50px;color: #f7f7f7;">CONTACT</span>
+  </div>
+</div>
 
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>For further information feel free to send us an email: Aes.irelandsection@gmail.com</p>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
 
 
 
