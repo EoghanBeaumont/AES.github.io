@@ -12,9 +12,37 @@ body, html {
 }
 
 .image {
-  display: block;
-  width: 100%;
-  height: auto;
+  opacity: 0.5;
+}
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent; 
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+div.fixed {
+  position: fixed;
+  top: 3px;
+  left: 0px;
+  z-index:2;
+}
+
+.image:hover {
+  opacity: 1.0;
 }
 
 .overlay {
@@ -47,7 +75,7 @@ h2 {
   border-bottom: 3px solid black;
 }
 h4{
-	border-bottom: 3px solid white;
+	border-bottom: 3px solid black;
 }
 .read-more-state {
   display: none;
@@ -78,7 +106,7 @@ h4{
   cursor: pointer;
   display: inline-block;
   padding: 0 .5em;
-  color: white;
+  color: black;
   font-size: .9em;
   line-height: 2;
   border: 1px solid #ddd;
@@ -181,7 +209,7 @@ h3 {
 }
 
 .navbar a {
-  float: left;
+   float: right;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -190,7 +218,7 @@ h3 {
 }
 
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
@@ -206,7 +234,7 @@ h3 {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #4c77b7;
 }
 
 .dropdown-content {
@@ -218,6 +246,8 @@ h3 {
   z-index: 2;
 }
 
+
+
 .dropdown-content a {
   float: none;
   color: white;
@@ -228,7 +258,7 @@ h3 {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #4c77b7;
 }
 
 .dropdown:hover .dropdown-content {
@@ -262,6 +292,7 @@ ul {
   
   color: white;
 }
+
 p.outset {border-style: outset;}
 
 
@@ -277,31 +308,47 @@ p.outset {border-style: outset;}
 <body>
 
 
+
 <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
+  <a href="#home"><div class="fixed">
+<img src ="audio-engineering-society.png" width="243" height="50"</a>
+</div><a
+
+		  <a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
+		  	    <div class="dropdown">
+    <button class="dropbtn">Policies
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#termsandconditions">Terms and Conditions</a>
+      <a href="#privacypolicy">Privacy Policy</a>
+      <a href="#cookiepolicy">Cookie Policy</a>
+    </div>
+	</div>
+		  <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
+		    <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
+			<a href="#policies">Events</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#groups">Groups</a>
+		  <a href="#students">Students</a>
+		   <a href="#membership">Membership</a>
+		  <a href="#events">Events</a>
+		    <div class="dropdown">
     <button class="dropbtn">About
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#about">about</a>
+      <a href="#about">About</a>
       <a href="#community">AES IRELAND SECTION</a>
       <a href="#volunteers">AES Ireland Volunteers</a>
 	  <a href="#past">AES Ireland Past Members</a>
     </div>
   </div>
-	<a href="#events">Events</a>
-		  <a href="#membership">Membership</a>
-		  <a href="#students">Students</a>
-		  <a href="#groups">Groups</a>
-		  <a href="#contact">Contact</a>
-		  <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
-	      <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
-		  <a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
+		  <a href="#news" style >News</a>
+		  
 </div>
 
-<div style="position:relative;"id="home">
+<div style="position:relative;top:60px;"id="home">
   <div style=";color:black;background-color:white;4;font-size:15px;text-align:center;padding:50px 80px;text-align: justify;">
 	<img src ="aesireland.png" alt="aesireland">
 	
@@ -312,11 +359,11 @@ p.outset {border-style: outset;}
 
 <div class="bgimg-2"id="news">
   <div class="caption">
-  <span class="border" style="background-color:#003d99;font-size:50px;color: ;">News</span>
+  <span class="border" style="background-color:blue;font-size:50px;color:white ;">News</span>
   </div>
 </div>
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <div>
   <input type="checkbox" class="read-more-state" id="post-2" />
 
@@ -366,13 +413,13 @@ p.outset {border-style: outset;}
 
 <div class="bgimg-2"id="about">
   <div class="caption">
-  <span class="border" style="background-color:#003d99;font-size:50px;color: ;">ABOUT</span>
+  <span class="border" style="background-color:blue;font-size:50px;color:white ;">ABOUT</span>
   </div>
 </div>
 
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:whitetext-align:center;padding:50px 80px;text-align: justify;">
   <h1>About The Audio Engineering Society</h1>
 <p>We are the Ireland Chapter of the Audio Engineering Society, an international organisation dedicated to audio engineering. For more than sixty years, the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.</p>
 <img src="audioexample.jpg" alt="example">
@@ -400,12 +447,12 @@ p.outset {border-style: outset;}
 
 <div class="bgimg-2"id="community">
   <div class="caption">
-  <span class="border" style="background-color:#003d99;font-size:50px;color: ;">AES IRELAND SECTION</span>
+  <span class="border" style="background-color:blue;font-size:50px;color:white ;">AES IRELAND SECTION</span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
 	<h1>AES Ireland Section Committee</h1>
 	<p>The AES Ireland Section committee work on a purely voluntary basis to run the events, activities and campaigns of the section. They work in a wide range of audio related commercial businesses and academia.</p>
 	<img src ="FlaithriNeff.jpg">
@@ -449,12 +496,12 @@ p.outset {border-style: outset;}
 </div>
 <div class="bgimg-2"id="volunteers">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: ;">AES IRELAND Volunteers</span>
+  <span class="border" style="background-color:blue;font-size:50px;color:white ;">AES IRELAND Volunteers</span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
 	<h1>AES Ireland Section Volunteers</h1>
 	<p>The Irish Chapter of the Audio Engineering Society is totally run by volunteers. Alongside the committee and the regional group chairs we rely on a wide team of amazing volunteers to run our events and activities.</p>
 	<h4></h4>
@@ -468,12 +515,12 @@ p.outset {border-style: outset;}
 </div>
 <div class="bgimg-2"id="past">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: ;">AES IRELAND Volunteers</span>
+  <span class="border" style="background-color:blue;font-size:50px;color:white ;">AES IRELAND Volunteers</span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:#white;text-align:center;padding:50px 80px;text-align: justify;">
 	<h1>Past Committee Members</h1>
 	<p>We are indebted to our past committee members for providing guidance, leadership and direction for the AES Ireland Section over the years.</p>
 	<img src="EndaBates.jpg">
@@ -487,24 +534,24 @@ p.outset {border-style: outset;}
 
 <div class="bgimg-3"id="events">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: #f7f7f7;">EVENTS</span>
+  <span class="border" style="background-color:blue;font-size:50px;color: white;">EVENTS</span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <p>Event infomation.</p>
   </div>
 </div>
 <div class="bgimg-3"id="membership">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:25px;color:blue;">MEMBERSHIP
+  <span class="border" style="background-color:blue;font-size:25px;color:white;">MEMBERSHIP
   </span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:white;text-align:center;padding:50px 80px;text-align: justify;color:black;">
+  <div style="background-color:white;text-align:center;padding:50px 80px;text-align: justify;color:black;">
 	<img src="aesmembers.png">
 	<p>A Member may be anyone active in audio engineering or acoustics who has an academic degree or the equivalent in scientific or professional experience in audio engineering and its allied arts and is familiar with the application of engineering principles and data in that field.
 	<br>
@@ -560,50 +607,50 @@ p.outset {border-style: outset;}
 <div class="row"> 
   <div class="column">
   <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image" style="width:50%">
- <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" style="width:50%">
- <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" style="width:50%">
-  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" style="width:50%">
-  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" style="width:50%">
-  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" style="width:50%">
-  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" style="width:50%">
-  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" style="width:50%">
+ <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" class="image" style="width:50%">
+ <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" class="image" style="width:50%">
+  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" class="image" style="width:50%">
+  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" class="image" style="width:50%">
+  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" class="image" style="width:50%">
+  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" class="image" style="width:50%">
+  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" class="image" style="width:50%">
   </div>
   <div class="column">
-  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" style="width:50%">
-  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png"style="width:50%">
-  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" style="width:50%">
-  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" style="width:50%">
-  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" style="width:50%">
-  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" style="width:50%">
-  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" style="width:50%">
+  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" class="image" style="width:50%"></a>
+  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png" class="image" style="width:50%"></a>
+  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" class="image" style="width:50%"></a>
+  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" class="image" style="width:50%"></a>
+  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" class="image" style="width:50%"></a>
+  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" class="image" style="width:50%"></a>
+  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" class="image" style="width:50%"></a>
   </div>  
   <div class="column">
-  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" style="width:50%">
-  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" style="width:50%">
-  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" style="width:50%">
-  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" style="width:50%">
-  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" style="width:50%">
-  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" style="width:50%">
-  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" style="width:50%">
+  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" class="image" style="width:50%"></a>
+  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" class="image" style="width:50%"></a>
+  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" class="image" style="width:50%"></a>
+  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" class="image" style="width:50%"></a>
+  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" class="image" style="width:50%"></a>
+  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" class="image" style="width:50%"></a>
+  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" class="image" style="width:50%"></a>
   </div>
   <div class="column">
-  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" style="width:50%">
-  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png"style="width:50%">
-  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" style="width:50%">
-  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" style="width:50%">
-  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" style="width:50%">
-  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" style="width:50%">
-  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" style="width:50%">
+  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" class="image" style="width:50%"></a>
+  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png" class="image" style="width:50%"></a>
+  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" class="image" style="width:50%"></a>
+  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" class="image" style="width:50%"></a>
+  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" class="image" style="width:50%"></a>
+  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" class="image" style="width:50%"></a>
+  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" class="image" style="width:50%"></a>
   </div>
 </div>
 <div class="bgimg-3"id="students">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: #f7f7f7;">STUDENTS</span>
+  <span class="border" style="background-color:blue;font-size:50px;color:white;">STUDENTS</span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;font-size:15px;text-align: justify;">
+  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;font-size:15px;text-align: justify;">
   <h1>Students</h1>
   <p>Our student community is vibrant and active. We recognise that students are the future of our industry and we support a range of student sections, events and educational activities.</p>
   <img src ="students.jpg">
@@ -623,7 +670,7 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 </div>
 <div class="bgimg-3"id="groups">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">GROUPS</span>
+  <span class="border" style="background-color:blue;font-size:25px;color:white;">GROUPS</span>
 
   </div>
 </div>
@@ -654,14 +701,399 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 </div>
 <div class="bgimg-3"id="contact">
   <div class="caption">
-  <span class="border" style="background-color:black;font-size:50px;color: #f7f7f7;">CONTACT</span>
+  <span class="border" style="background-color:blue;font-size:50px;color: white;">CONTACT</span>
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>For further information feel free to send us an email: Aes.irelandsection@gmail.com</p>
+  <p>For further information feel free to send us an email: <a href="mailto: info@aes-uk.org">info@aes-uk.org</p></a>
+</div>
+</div>
+<div class="bgimg-3"id="termsandconditions">
+  <div class="caption">
+  <span class="border" style="background-color:blue;font-size:50px;color: white;">TERMS AND CONDITIONS</span>
+  </div>
+</div>
 
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+ <p>Terms and conditions of use
+
+1.      Introduction
+<br>
+1.1    These terms and conditions shall govern your use of our website.
+<br>
+1.2    By using our website, you accept these terms and conditions in full; accordingly, if you disagree with these terms and conditions or any part of these terms and conditions, you must not use our website.
+<br>
+1.3    If you use any of our website services, we will ask you to expressly agree to these terms and conditions.
+<br>
+1.5    Our website uses cookies; by using our website or agreeing to these terms and conditions, you consent to our use of cookies in accordance with the terms of our privacy and cookies policy.
+<br>
+2.      Credit
+<br>
+2.1    This document was created using a template from SEQ Legal (https://seqlegal.com).
+<br>
+3.      Copyright notice
+<br>
+3.1    Copyright (c) 2019 Audio Engineering Society UK Section
+<br>
+3.2    Subject to the express provisions of these terms and conditions:
+<br>
+(a)    we, together with our licensors, own and control all the copyright and other intellectual property rights in our website and the material on our website; and
+<br>
+(b)    all the copyright and other intellectual property rights in our website and the material on our website are reserved.
+<br>
+4.      Licence to use website
+<br>
+4.1    You may:
+<br>
+(a)    view pages from our website in a web browser;
+<br>
+(b)    download pages from our website for caching in a web browser;
+<br>
+(c)    print pages from our website;
+<br>
+(d)    stream audio and video files from our website and
+<br>
+(e)    use our website services by means of a web browser,
+<br>
+subject to the other provisions of these terms and conditions.
+<br>
+4.3    You may only use our website for your own personal and business purposes, and you must not use our website for any other purposes.
+<br>
+4.4    Except as expressly permitted by these terms and conditions, you must not edit or otherwise modify any material on our website.
+<br>
+4.5    Unless you own or control the relevant rights in the material, you must not:
+<br>
+(a)    republish material from our website (including republication on another website);
+<br>
+(b)    sell, rent or sub-license material from our website;
+<br>
+(c)    show any material from our website in public;
+<br>
+(d)    exploit material from our website for a commercial purpose; or
+<br>
+(e)    redistribute material from our website.
+<br>
+4.6    Notwithstanding Section 4.5, you may redistribute our newsletter in print and electronic form to any person.
+<br>
+4.7    We reserve the right to restrict access to areas of our website, or indeed our whole website, at our discretion; you must not circumvent or bypass, or attempt to circumvent or bypass, any access restriction measures on our website.
+<br>
+5.      Acceptable use
+<br>
+5.1    You must not:
+<br>
+(a)    use our website in any way or take any action that causes, or may cause, damage to the website or impairment of the performance, availability or accessibility of the website;
+<br>
+(b)    use our website in any way that is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity;
+<br>
+(c)    use our website to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software;
+<br>
+(d)    conduct any systematic or automated data collection activities (including without limitation scraping, data mining, data extraction and data harvesting) on or in relation to our website without our express written consent;
+<br>
+(g)    use data collected from our website for any direct marketing activity (including without limitation email marketing, SMS marketing, telemarketing and direct mailing).
+<br>
+5.2    You must not use data collected from our website to contact individuals, companies or other persons or entities.
+<br>
+5.3    You must ensure that all the information you supply to us through our website, or in relation to our website, is true, accurate, current, complete and non-misleading.
+<br>
+6.      Registration and accounts
+<br>
+6.2    You may register for an account with our website by completing and submitting the account registration form on our website, and clicking on the verification link in the email that the website will send to you.
+<br>
+6.3    You must not allow any other person to use your account to access the website.
+<br>
+6.4    You must notify us in writing immediately if you become aware of any unauthorised use of your account.
+<br>
+6.5    You must not use any other person’s account to access the website
+<br>
+7.      User login details
+<br>
+7.1    If you register for an account with our website, you will be asked to choose a user ID and password.
+<br>
+7.2    Your user ID must not be liable to mislead and must comply with the content rules set out in Section 10; you must not use your account or user ID for or in connection with the impersonation of any person.
+<br>
+7.3    You must keep your password confidential.
+<br>
+7.4    You must notify us in writing immediately if you become aware of any disclosure of your password.
+<br>
+7.5    You are responsible for any activity on our website arising out of any failure to keep your password confidential, and may be held liable for any losses arising out of such a failure.
+<br>
+8.      Cancellation and suspension of account
+<br>
+8.1    We may:
+<br>
+(a)    suspend your account;
+<br>
+(b)    cancel your account; and/or
+<br>
+(c)    edit your account details,
+<br>
+at any time in our sole discretion without notice or explanation.
+<br>
+8.2    You may cancel your account on our website using your account control panel on the website.
+<br>
+9.      Your content: licence
+<br>
+9.1    In these terms and conditions, “your content” means all works and materials (including without limitation text, graphics, images, audio material, video material, audio-visual material, scripts, software and files) that you submit to us or our website for storage or publication on, processing by, or transmission via, our website.
+<br>
+9.2    You grant to us a worldwide, irrevocable, non-exclusive, royalty-free licence to reproduce, store and publish your content on and in relation to this website and any successor website
+<br>
+9.3    You grant to us the right to sub-license the rights licensed under Section 9.2.
+<br>
+9.4    You grant to us the right to bring an action for infringement of the rights licensed under Section 9.2.
+<br>
+9.5    You hereby waive all your moral rights in your content to the maximum extent permitted by applicable law; and you warrant and represent that all other moral rights in your content have been waived to the maximum extent permitted by applicable law.
+<br>
+9.6    You may edit your content to the extent permitted using the editing functionality made available on our website.
+<br>
+9.7    Without prejudice to our other rights under these terms and conditions, if you breach any provision of these terms and conditions in any way, or if we reasonably suspect that you have breached these terms and conditions in any way, we may delete, unpublish or edit any or all of your content.
+<br>
+10.    Your content: rules
+<br>
+10.1  You warrant and represent that your content will comply with these terms and conditions.
+<br>
+10.2  Your content must not be illegal or unlawful, must not infringe any person’s legal rights, and must not be capable of giving rise to legal action against any person (in each case in any jurisdiction and under any applicable law).
+<br>
+10.3  Your content, and the use of your content by us in accordance with these terms and conditions, must not:
+<br>
+(a)    be libellous or maliciously false;
+<br>
+(b)    be obscene or indecent;
+<br>
+(c)    infringe any copyright, moral right, database right, trade mark right, design right, right in passing off, or other intellectual property right;
+<br>
+(d)    infringe any right of confidence, right of privacy or right under data protection legislation;
+<br>
+(e)    constitute negligent advice or contain any negligent statement;
+<br>
+(f)    constitute an incitement to commit a crime[, instructions for the commission of a crime or the promotion of criminal activity];
+<br>
+(g)    be in contempt of any court, or in breach of any court order;
+<br>
+(h)    be in breach of racial or religious hatred or discrimination legislation;
+<br>
+(i)     be blasphemous;
+<br>
+(j)    be in breach of official secrets legislation;
+<br>
+(k)    be in breach of any contractual obligation owed to any person;
+<br>
+(l)     depict violence in an explicit, graphic or gratuitous manner;
+<br>
+(m)   be pornographic, lewd, suggestive or sexually explicit;
+<br>
+(n)    be untrue, false, inaccurate or misleading;
+<br>
+(o)    consist of or contain any instructions, advice or other information which may be acted upon and could, if acted upon, cause illness, injury or death, or any other loss or damage;
+<br>
+(p)    constitute spam;
+<br>
+(q)    be offensive, deceptive, fraudulent, threatening, abusive, harassing, anti-social, menacing, hateful, discriminatory or inflammatory; or
+<br>
+(r)    cause annoyance, inconvenience or needless anxiety to any person.
+<br>
+11.    Limited warranties
+<br>
+11.1  We do not warrant or represent:
+<br>
+(a)    the completeness or accuracy of the information published on our website;
+<br>
+(b)    that the material on the website is up to date; or
+<br>
+(c)    that the website or any service on the website will remain available.
+<br>
+11.2  We reserve the right to discontinue or alter any or all of our website services, and to stop publishing our website, at any time in our sole discretion without notice or explanation; and save to the extent expressly provided otherwise in these terms and conditions, you will not be entitled to any compensation or other payment upon the discontinuance or alteration of any website services, or if we stop publishing the website.
+<br>
+11.3  To the maximum extent permitted by applicable law and subject to Section 12.1, we exclude all representations and warranties relating to the subject matter of these terms and conditions, our website and the use of our website.
+<br>
+12.    Limitations and exclusions of liability
+<br>
+12.1  Nothing in these terms and conditions will:
+<br>
+(a)    limit or exclude any liability for death or personal injury resulting from negligence;
+<br>
+(b)    limit or exclude any liability for fraud or fraudulent misrepresentation;
+<br>
+(c)    limit any liabilities in any way that is not permitted under applicable law; or
+<br>
+(d)    exclude any liabilities that may not be excluded under applicable law.
+<br>
+12.2  The limitations and exclusions of liability set out in this Section 12 and elsewhere in these terms and conditions:
+<br>
+(a)    are subject to Section 12.1; and
+<br>
+(b)    govern all liabilities arising under these terms and conditions or relating to the subject matter of these terms and conditions, including liabilities arising in contract, in tort (including negligence) and for breach of statutory duty, except to the extent expressly provided otherwise in these terms and conditions.
+<br>
+12.3  To the extent that our website and the information and services on our website are provided free of charge, we will not be liable for any loss or damage of any nature.
+<br>
+12.4  We will not be liable to you in respect of any losses arising out of any event or events beyond our reasonable control.
+<br>
+12.5  We will not be liable to you in respect of any business losses, including (without limitation) loss of or damage to profits, income, revenue, use, production, anticipated savings, business, contracts, commercial opportunities or goodwill.
+<br>
+12.6  We will not be liable to you in respect of any loss or corruption of any data, database or software.
+<br>
+12.7  We will not be liable to you in respect of any special, indirect or consequential loss or damage.
+<br>
+12.8  You accept that we have an interest in limiting the personal liability of our officers and employees and, having regard to that interest, you acknowledge that we are a limited liability entity; you agree that you will not bring any claim personally against our officers or employees in respect of any losses you suffer in connection with the website or these terms and conditions (this will not, of course, limit or exclude the liability of the limited liability entity itself for the acts and omissions of our officers and employees).
+<br>
+13.    Breaches of these terms and conditions
+<br>
+13.1  Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, or if we reasonably suspect that you have breached these terms and conditions in any way, we may:
+<br>
+(a)    send you one or more formal warnings;
+<br>
+(b)    temporarily suspend your access to our website;
+<br>
+(c)    permanently prohibit you from accessing our website;
+<br>
+(d)    block computers using your IP address from accessing our website;
+<br>
+(e)    contact any or all of your internet service providers and request that they block your access to our website;
+<br>
+(f)    commence legal action against you, whether for breach of contract or otherwise; and/or
+<br>
+(g)    suspend or delete your account on our website.
+<br>
+ 
+13.2  Where we suspend or prohibit or block your access to our website or a part of our website, you must not take any action to circumvent such suspension or prohibition or blocking
+<br>
+14.    Variation
+<br>
+14.1  We may revise these terms and conditions from time to time.
+<br>
+14.2  The revised terms and conditions shall apply to the use of our website from the date of publication of the revised terms and conditions on the website, and you hereby waive any right you may otherwise have to be notified of, or to consent to, revisions of these terms and conditions.] OR [We will give you written notice of any revision of these terms and conditions, and the revised terms and conditions will apply to the use of our website from the date that we give you such notice; if you do not agree to the revised terms and conditions, you must stop using our website.
+<br>
+14.3  If you have given your express agreement to these terms and conditions, we will ask for your express agreement to any revision of these terms and conditions; and if you do not give your express agreement to the revised terms and conditions within such period as we may specify, we will disable or delete your account on the website, and you must stop using the website.
+<br>
+15.    Assignment
+<br>
+15.1  You hereby agree that we may assign, transfer, sub-contract or otherwise deal with our rights and/or obligations under these terms and conditions.
+<br>
+15.2  You may not without our prior written consent assign, transfer, sub-contract or otherwise deal with any of your rights and/or obligations under these terms and conditions.
+<br>
+16.    Severability
+<br>
+16.1  If a provision of these terms and conditions is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions will continue in effect.
+<br>
+16.2  If any unlawful and/or unenforceable provision of these terms and conditions would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect.
+<br>
+17.    Third party rights
+<br>
+17.1  A contract under these terms and conditions is for our benefit and your benefit, and is not intended to benefit or be enforceable by any third party.
+<br>
+17.2  The exercise of the parties’ rights under a contract under these terms and conditions is not subject to the consent of any third party.
+<br>
+18.    Entire agreement
+<br>
+18.1  Subject to Section 12.1, these terms and conditions[, together with [our privacy and cookies policy],] shall constitute the entire agreement between you and us in relation to your use of our website and shall supersede all previous agreements between you and us in relation to your use of our website.
+<br>
+19.    Law and jurisdiction
+<br>
+19.1  These terms and conditions shall be governed by and construed in accordance with [English law].
+<br>
+19.2  Any disputes relating to these terms and conditions shall be subject to the non-exclusive jurisdiction of the courts of England.
+<br>
+20.    Statutory and regulatory disclosures
+<br>
+21.    Our details
+<br>
+21.1  This website is owned and operated by Audio Engineering Society UK Section.
+<br>
+21.4  You can contact us:
+<br>
+(b)    using our website contact form;
+<br>
+(d)    by email, using the email address published on our website from time to time.</p>
+</div>
+</div>
+<div class="bgimg-3"id="privacypolicy">
+  <div class="caption">
+  <span class="border" style="background-color:blue;font-size:50px;color: white;">PRIVACY POLICY</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+AES UK Section is dedicated to protecting your privacy when you visit or communicate with our site or personnel. The Privacy Policy offered here, along with our terms of use, offers an explanation regarding any personal data you may provide to us or that we garner from you.
+<br>
+The Policy may be changed occasionally to update you regarding any changes, so please make sure you review the Privacy Policy.
+<br>
+1. Data and Information Collected
+To operate our website it is essential to collect or process certain data, such as the following:
+<br>
+1.1 Information regarding your visits to our website, any resources you used such as traffic data, location data, weblogs, and any communication data (these items are included, but not limited to those specified).
+<br>
+1.2 Any data collected from communications to us from you, for any reason.
+<br>
+2. How we use Cookies
+It is possible that we may gather information regarding your computer for our services.  This collection of data is used for statistical analysis about our website for our own use.
+<br>
+Any information shared will not identify who you are, but rather be mathematical data about our visitors and their use on our site.  The data does not give out any personal details.
+<br>
+Cookies may be used to gather this general internet data.  When used, cookies are downloaded to your computer without prompting.  The cookie file is stored on your hard drive, where files are transferred to.  This information helps us improve our site and services to you.
+<br>
+All computers can block cookies by activating proper browser settings.  There is a place to enable you to decline cookies under the options menu.  Please note if you decline cookies you may experience limited access to certain areas of our site.
+<br>
+3. Information Use
+Any information collected and stored regarding you is to enable us to offer better services to you.  We may also use the data collected for the following:
+<br>
+3.1 We may use data you provided in order to offer you information you asked for from our site, in direct relation to our services.  We may also send information we feel might interest you, as long as you have consented to such communications.
+<br>
+3.2 We may, with your permission, pass your details on to a third party who may be appointed specifically to deal with your request.
+<br>
+3.3 Any commitments we made to you may require use of your information, used only to fulfil your request.
+<br>
+3.4 We may use your information to explain any changes our website has undergone such as structural or service/ product modifications, which could affect our service to you.
+<br>
+3.5 If you do not wish communication from our website or a third party you will be given the opportunity to decline said communication.  We will not allow your information collected while you were on our site to be used by us or a third party if the consent is withheld.
+<br>
+4. Personal Data Storage
+<br>
+4.1 It is possible that we may collect transfer data from you regarding locations outside of the European Economic Area.  This information is used for storing and processing.  It may be processed by staff outside the European Economic Area, by a company who works for us or a supplier we have.  An example is where we may process and conclude your order by using payment details or offering support services.  You have agreed to this communication by processing and finalising your order.  At any time you provide personal data, you agree to a transfer for processing and storage.  We take all reasonable steps to ensure the safety of the data transfer in agreement with this privacy policy.
+<br>
+4.2 Data you provide us with will be stored on secure servers.  Any transaction details will be encrypted to provide you safety.
+<br>
+4.3 Transmission of data via the internet is never completely secure, thus a guarantee of data sent electronically or transmitted cannot be given.  Information offered is therefore at your own risk.  If given a password or chosen to obtain a password, you can access the secure section, requiring the password to remain confidential by you, as your responsibility.
+<br>
+5. Sharing Your Information
+<br>
+5.1 If applicable, we may share your personal information to any Audio Engineering Society region or organisation.
+<br>
+5.2 Personal Information may be shared with third parties:
+<br>
+5.2.1 If we sell part or all of our business or assets we may share personal information to a third party.
+<br>
+5.2.2 When legally requested, we may share your information.
+<br>
+5.2.3 Fraud protection and to minimise credit risk may require a sharing of your information.
+<br>
+6. Third Party Links
+Third Party Links to websites on our website are not included in our privacy policy.  You will need to check their privacy policy regarding data.  We do not accept liability or responsibility for third party links and their privacy policies.
+<br>
+7. Information Access
+The Data Protection Act 1998 provides you with rights to access any information we may collect and store about you.  If you wish to have access to this information it may be subject to a £10 payment fee, used to cover our costs regarding the information you requested.  If you wish to access this data please provide contact details below.
+<br>
+8. Contacting Us
+We are happy to receive any queries, comments, or requests you may have regarding our Privacy Policy.  Feel free and do not hesitate to use the online form to contact us.
+</div>
+</div>
+<div class="bgimg-3"id="cookiepolicy">
+  <div class="caption">
+  <span class="border" style="background-color:blue;font-size:50px;color: white;">COOKIE POLICY</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+  This website does not store any information that would, on its own, allow us to identify individual users of this service without their permission. Any cookies that may be used by this website are used either solely on a per session basis or to maintain user preferences.
+  <br>
+  Cookies are not shared with any third parties. These cookies are set only after the visitor has given consent.
+  <br>
+  You can block cookies by activating the settings on your browser that allows you to refuse the setting of all or some cookies. However, if you use your browser settings to block all cookies (including essential cookies) you may not be able to access all or parts of this site.
+  </div>
+  </div>
 <script>
 function myFunction() {
   var dots = document.getElementById("dots");
