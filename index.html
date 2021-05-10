@@ -13,13 +13,13 @@ body, html {
 
 a:link {
   color: black;
+  text-decoration: underline;
   background-color: transparent;
-  text-decoration: none;
 }
 a:visited {
-  color: pink;
-  background-color: transparent; 
-  text-decoration: none;
+  color: black;
+  background-color: blackt;
+  text-decoration: transparent;
 }
 a:hover {
   color: red;
@@ -97,6 +97,7 @@ h4{
 
 .read-more-state ~ .read-more-trigger:before {
   content: 'Show more';
+  cursor: pointer;
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
@@ -112,6 +113,7 @@ h4{
   line-height: 2;
   border: 1px solid #ddd;
   }
+  
 .rectangle {
   height: 50px;
   width: 100px;
@@ -273,7 +275,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
+}																																																																																																																																	
  
  .fa {
   font-size: 15px;
@@ -348,8 +350,8 @@ p.outset {border-style: outset;}
 		  
 </div>
 
-<div style="position:relative;top:60px;"id="home">
-  <div style=";color:black;background-color:white;4;font-size:15px;text-align:center;padding:50px 80px;text-align: justify;">
+<div id="home">
+  <div style="position:relative;top:30px;color:black;background-color:white;4;font-size:15px;text-align:center;padding:20px 80px;text-align: justify;">
 	<img src ="aesireland.png" alt="aesireland">
 	
 	<p>This is the homepage of the Ireland Section of the Audio Engineering Society, an international organisation dedicated to audio engineering. For more than sixty years, the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.The Ireland Section is run voluntarily by the committee, The Ireland section is one of  has the largest AES section outside the United States, with over nine hundred members.<p>
@@ -365,12 +367,11 @@ p.outset {border-style: outset;}
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <div>
   <input type="checkbox" class="read-more-state" id="post-2" />
-
   <ul class="read-more-wrap">
     <li style="font-size:30px">The Human Tuning Fork’ and AES Ireland AGM</li>
 	<li style="font-size:15px">29TH FEBRUARY 2020</li>
-	<img src="newstuningfork.jpg">
-    <li class="read-more-target" style="font-size:15px">Meeting Topic: ‘The Human Tuning Fork’ and AES Ireland AGM</li>
+	<li><img src="newstuningfork.jpg"></li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: ‘The Human Tuning Fork&#58;‘ and AES Ireland AGM</li>
     <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
 	<li class="read-more-target" style="font-size:15px">Speaker Name: Fiona Smyth (Trinity College Dublin)</li>
 	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: • Election of Officers</li>
@@ -544,7 +545,7 @@ p.outset {border-style: outset;}
 </div>
 <div class="bgimg-3"id="membership">
   <div class="caption">
-  <span class="border" style="background-color:blue;font-size:25px;color:white;">MEMBERSHIP
+  <span class="border" style="background-color:transparent;font-size:100px;color:white;">MEMBERSHIP
   </span>
   </div>
 </div>
@@ -677,23 +678,23 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 <div style="position:relative;">
   <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
   <h1>Dundalk Institute Of Technology</h1>
-  <img src="dkit.jpg" alt="dkit">
+  <a href="https://dkit.ie/" target="_blank"><img src="dkit.jpg" alt="dkit"></a>
   <p> DkIT is the focal point for higher education and research on the Belfast-Dublin corridor, serving the North Leinster, South Ulster region. Students and graduates are an important asset to this region and success is vital to its continued economic, social and cultural growth.</p>
   <h2></h2>
    <h1>Limerick Institute Of Technology</h1>
-  <img src="lit.jpg" alt="lit">
+  <a href="https://www.lit.ie/" target="_blank"><img src="lit.jpg" alt="lit"></a>
   <p> Limerick Institute of Technology is home to over 6,500 students across vibrant campuses in Limerick city, Thurles, Clonmel and Ennis, offering lively and enjoyable student experiences. We are also currently developing a new state of the art engineering focussed campus at Coonagh in Limerick.</p>
   <h2></h2>
    <h1>Maynooth University</h1>
-  <img src="maynooth.jpg" alt="maynooth">
+  <a href="https://www.maynoothuniversity.ie/" target="_blank"><img src="maynooth.jpg" alt="maynooth"></a>
   <p> Maynooth University is a thriving research enterprise, a vibrant and exciting place to learn, and importantly, is a university that places equal value on research and teaching.Maynooth engaged university with extensive research and teaching partnerships with enterprise, public bodies, civil society and community organisations.</p>
   <h2></h2>
    <h1>Trinity College Dublin</h1>
-  <img src="tcd.jpg" alt="tcd">
+  <a href="https://tcd.ie/" target="_blank"><img src="tcd.jpg" alt="tcd"></a>
   <p> Trinity College Dublin, the University of Dublin they provide a liberal environment where independence of thought is highly valued and all are encouraged to achieve their potential. Promoting a diverse, interdisciplinary, inclusive environment which nurtures ground-breaking research, innovation, and creativity through engaging with issues of global significance.</p>
   <h2></h2>
   <h1>University College Dublin</h1>
-  <img src="ucd.jpg" alt="ucd">
+   <a href="https://www.ucd.ie/" target="_blank"><img src="ucd.jpg" alt="ucd"></a>
   <p> UCD is one of Europe's leading research-intensive universities; an environment where undergraduate education, masters and PhD training, research, innovation and community engagement form a dynamic spectrum of activity</p>
   
   </div>
@@ -1094,38 +1095,7 @@ We are happy to receive any queries, comments, or requests you may have regardin
   </div>
   </div>
 <script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
 </script>
 
 
