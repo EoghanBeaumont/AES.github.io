@@ -9,6 +9,7 @@ body, html {
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
+  
 }
 
 a:link {
@@ -36,11 +37,18 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+normal{
+left:20px;
+top:200px;
+ z-index:4;
+
+
+}
 div.fixed {
   position: fixed;
-  top: 3px;
-  left: 0px;
-  z-index:2;
+  top: -5px;
+  left: 20px;
+  z-index:4;
 }
 .image{
 	opacity: 0.5;
@@ -88,7 +96,7 @@ h2 {
 h4{
 	border-bottom: 3px solid black;
 }
-.read-more-state {
+ead-more-state {
   display: none;
 }
 
@@ -157,17 +165,17 @@ h4{
  
 }
 .bgimg-1 {
-  background-image: url("fade.jpg");
+  background-image: url("audiostudio2.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("fade.jpg");
+  background-image: url("audiostudio2.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("fade.jpg");
+  background-image: url("audiostudio2.jpg");
   min-height: 400px;
 }
 
@@ -215,24 +223,34 @@ h3 {
 .navbar {
   overflow: hidden;
   background-color: #003d99;
-   position: fixed;
-  z-index:1;
-  top: 0;
+   position: absolute;
+  z-index:3;
+  top: 200px;
   width: 100%;
   border-bottom: 1px solid yellow;
 
 }
+.navbar-right {
+  float: right;
+}
+
+.sticky {
+  top: 0px;
+  position: fixed;
+}
 
 .navbar a {
-   float: right;
+   float:left;
   font-size: 16px;
   color: white;
   padding: 12px 16px;
   text-decoration: none;
 }
-
-.dropdown {
+.navbar-right {
   float: right;
+}
+.dropdown {
+  float: left;
   overflow: hidden;
 }
 
@@ -320,33 +338,18 @@ p.outset {border-style: outset;}
 </style>
 </head>
 <body>
-
-
-
-<div class="navbar">
-  <a href="#home"><div class="fixed">
-<img src ="audio-engineering-society.png" width="243" height="50"</a>
-</div>
-<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
-		    <a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
-		  
-		  	    <div class="dropdown">
-    <button class="dropbtn">Policies
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#termsandconditions">Terms and Conditions</a>
-      <a href="#privacypolicy">Privacy Policy</a>
-      <a href="#cookiepolicy">Cookie Policy</a>
+<div onscroll="myFunction()">
+<div id="home">
+  <div style="position:relative; z-index: ;top:0px;color:black;background-color:white;4;font-size:15px;text-align:center;padding:20px 80px;text-align: justify;">
+	<img src ="aesireland.png" alt="aesireland" class="center" style="width:375px;height:79px;"></span>
+	<p>This is the homepage of the Ireland Section of the Audio Engineering Society&#44; an international organisation dedicated to audio engineering. For more than sixty years, the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.The Ireland Section is run voluntarily by the committee&#44; The Ireland section is one of  has the largest AES section outside the United States, with over nine hundred members.<p>
     </div>
-	</div>
-			<a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
-			<a href="#contact">Contact</a>
-			<a href="#groups">Groups</a>
-			<a href="#students">Students</a>
-			<a href="#membership">Membership</a>
-			<a href="#events">Events</a>
-		    <div class="dropdown">
+</div>
+
+<div class="navbar" id="navbar">
+<a href="#home" class="fa fa-home"></i>
+<a href="#news">News</a>
+<div class="dropdown">
     <button class="dropbtn">About
       <i class="fa fa-caret-down"></i>
     </button>
@@ -357,15 +360,29 @@ p.outset {border-style: outset;}
 	  <a href="#past">AES Ireland Past Members</a>
     </div>
   </div>
-		<a href="#news">News</a>
-		    
-</div>
-<div id="home">
-  <div style="position:relative;top:30px;color:black;background-color:white;4;font-size:15px;text-align:center;padding:20px 80px;text-align: justify;">
-	<img src ="aesireland.png" alt="aesireland" class="center"></span>
-	<p>This is the homepage of the Ireland Section of the Audio Engineering Society&#44; an international organisation dedicated to audio engineering. For more than sixty years, the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.The Ireland Section is run voluntarily by the committee&#44; The Ireland section is one of  has the largest AES section outside the United States, with over nine hundred members.<p>
+  <a href="#events">Events</a>
+  <a href="#membership">Membership</a>
+  <a href="#students">Students</a>
+   <a href="#students">Groups</a>
+     	    <div class="dropdown">
+    <button class="dropbtn">Policies
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#termsandconditions">Terms and Conditions</a>
+      <a href="#privacypolicy">Privacy Policy</a>
+      <a href="#cookiepolicy">Cookie Policy</a>
     </div>
+	</div>
+	 <div class="navbar-right">
+	<a href="#contact">Contact</a>
+	<a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
+	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
+	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
+			</div>
+		  
 </div>
+
 
 <div class="bgimg-2"id="news">
   <div class="caption">
@@ -1107,6 +1124,21 @@ We are happy to receive any queries&#44; comments&#44; or requests you may have 
   </div>
 <script>
 
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("navbar");
+var sticky = header.offsetTop;
+var logo= document.getElementById("homelogo");
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+	logo.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+	logo.classList.add("sticky");
+  }
+}
 </script>
 
 
