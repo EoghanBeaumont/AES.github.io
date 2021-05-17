@@ -3,6 +3,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <style>
 body, html {
   height: 100%;
@@ -137,13 +139,6 @@ h4{
   position: relative;
   }
   
-.rectangle {
-  height: 50px;
-  width: 100px;
-  background-color: #555;
-  position: relative;
-  top:250px;
-}
 .button {
   background-color: transparent;
   font-weight: bold;
@@ -305,17 +300,24 @@ h3 {
   font: 20px "Lato", sans-serif;
   color: #111;
 }
+.bar {
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  z-index:2;
+}
 
 .navbar {
   overflow: hidden;
   background-color: #003d99;
    position: absolute;
   z-index:3;
-  top: 300px;
+  top: 310px;
   width: 100%;
   border-bottom: 1px solid yellow;
 
 }
+
 .navbar-right {
   float: right;
 }
@@ -426,15 +428,18 @@ left:50px;
   }
 }
 </style>
+
 </head>
 <body>
+<title> AES Ireland Section</title>
 <div onscroll="myFunction()">
 <div id="home">
   <div style="position:relative; z-index: ;top:0px;color:black;background-color:white;4;font-size:15px;text-align:center;padding:20px 80px;text-align: justify;">
-	<img src ="aesirelandsection.jpg" alt="aesireland" class="center"></span>
+	<img src ="aesirelandsection.jpg" alt="aesireland" class="center" style="max-width:100%;"></span>
 	<p>This is the homepage of the Ireland Section of the Audio Engineering Society&#44; an international organisation dedicated to audio engineering. For more than sixty years, the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.The Ireland Section is run voluntarily by the committee&#44; The Ireland section is one of  has the largest AES section outside the United States, with over nine hundred members.<p>
     </div>
 </div>
+<div class="bar"></div>
 
 <div class="navbar" id="navbar">
 <a href="#home" class="fa fa-home"></i>
@@ -492,7 +497,7 @@ left:50px;
 
 <div class="bgimg-2"id="news">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">News</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white;-webkit-text-stroke: 1px black;">News</span>
   </div>
 </div>
 <div style="position:relative;">
@@ -502,7 +507,7 @@ left:50px;
   <ul class="read-more-wrap">
     <li style="font-size:30px">The Human Tuning Fork and AES Ireland AGM</li>
 	<li style="font-size:15px">29TH FEBRUARY 2020</li>
-	<li><img src="newstuningfork.jpg"></li>
+	<li><img src="newstuningfork.jpg" style="max-width:100%"></li>
     <li class="read-more-target" style="font-size:15px">Meeting Topic: &#39;The Human Tuning Fork&#39; and AES Ireland AGM</li>
     <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
 	<li class="read-more-target" style="font-size:15px">Speaker Name: Fiona Smyth (Trinity College Dublin)</li>
@@ -545,16 +550,16 @@ left:50px;
 
 <div class="bgimg-2"id="about">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">ABOUT</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black;">ABOUT</span>
   </div>
 </div>
 
 
 <div style="position:relative;">
-  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align:justify;">
   <h1>About The Audio Engineering Society</h1>
 <p>We are the Ireland Chapter of the Audio Engineering Society&#44; an international organisation dedicated to audio engineering. For more than sixty years&#44; the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.</p>
-<img src="audioexample.jpg" alt="example">
+<img src="audioexample.jpg" alt="example" style="max-width:100%">
 <h4></h4>
 <h1>What we do</h1>
 <p>The AES is principally a learned society&#44; publishing research&#44; encouraging co-operation on best practice throughout the industry&#44; and disseminating technical information through:</p>
@@ -579,7 +584,7 @@ left:50px;
 
 <div class="bgimg-2"id="community">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">AES IRELAND SECTION</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black;">AES IRELAND SECTION</span>
   </div>
 </div>
 
@@ -590,17 +595,17 @@ left:50px;
 	<h4></h4>
 <div class="row">
  <div class="column">
-	<img src="JoeTimoney.jpg" alt="Joe"style="margin-left:40%">
+	<img src="JoeTimoney.jpg" alt="Joe"style="margin-left:40%;max-width:100%">
    	<p style="position: relative;left:70%;font-weight: bold;">Joe Timoney &#8208; Chair</p>
 	<p style="width:200%" >Dr Joe Timoney completed his PhD in Electronic Engineering at TCD&#44; Ireland in 1998. He joined the Dept. of Computer Science at Maynooth University in the following year. He teaches on undergraduate programs in Computer Science and in Music Technology. His research interests are based in the area of audio signal processing&#44; with a focus on musical sound synthesis and the digital modelling of analogue subtractive synthesizers. He is also a DIY electronics enthusiast and has participated in a number of national Maker Fairs as part of the Maynooth University club. He has a member of the Audio Engineering Society for over 10 years.</p>
   </div>
     <div class="column">
-	<img src="RokaiaJedir.jpg" alt="Rokaia" style="margin-left:200%">
+	<img src="RokaiaJedir.jpg" alt="Rokaia" style="margin-left:200%;max-width:100%">
 	<p style="position: relative;left:202%;font-weight:bold;">Rokaia Jedir &#8208; vice Chair</p>
 	<p style="position: relative;left:125%;width:200%;">Rokaia Jedir is a postgraduate researcher at the Interactive Systems Research Group (ISRG)&#44; Limerick Institute of Technology. In 2018 she graduated with a first-class honours BSc degree in Music Technology & Production&#44; and is currently pursuing a MSc degree with intentions to transfer to PhD in 2020. Her primary research interests include psychoacoustics&#44; working memory&#44; and human&#8208;computer interaction in general. Currently&#44; her research is dedicated to developing a computational model of human working memory (WM) as applied to the auditory perceptual system&#44; aimed at contributing to the development of next-generation multimodal interface design. She is a committee member of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
   </div>
     <div class="column">
-	<img src="alexwilson.png" alt="Alex" style="margin-left: 300%">
+	<img src="alexwilson.png" alt="Alex" style="margin-left: 300%;max-width:100%">
     <p style="position: relative;left:305%;font-weight: bold;">Alex Wilson &#8208; Secretary Position</p>
 	<p style="position: relative;left:250%;width:200%;">Alex Wilson is currently a postdoctoral research fellow in the Acoustics Research Centre at the University of Salford&#44; investigating the perception of object&#8208;based audio technologies while teaching digital signal processing. He received a PhD from the same institution in 2017&#44; which covered the areas of audio quality&#44; popular music&#44; accessibility and automated mixing&#44; and has produced three papers for the Journal of the AES. He was the co&#8208;chair and organiser of the 3rd Workshop on Intelligent Music Production and has contributed to conferences and workshops organised by the UK section of the AES. A native of Dublin&#44; in a past life&#44; he studied experimental physics at Maynooth University while recording excessive amounts of music in a bedroom studio.</p>
 	
@@ -609,17 +614,17 @@ left:50px;
 	<h4></h4>
 	<div class="row">
 	 <div class="column">
-	 <img src ="MalachyRonan.jpg" alt="Malachy"style="margin-left:35%">
+	 <img src ="MalachyRonan.jpg" alt="Malachy"style="margin-left:35%;max-width:100%">
    	<p style="position: relative;left:60%;font-weight: bold;">Malachy Ronan &#8208; Committe Member</p>
 	<p style="width:200%" >Dr. Malachy Ronan is an Assistant Lecturer at the Limerick Institute of Technology. He holds MSc in Music Technology and PhD in Perception and Audio Engineering degrees from the University of Limerick. A member of the AES since 2014&#44; he has disseminated research at various AES outlets and is co-chair for student volunteers at AES 146. Current research interests include perception and signal processing.</p>
 	</div>
 	  <div class="column">
-	<img src ="RonanODea.jpg" alt="Ronan" style="margin-left:160%">
+	<img src ="RonanODea.jpg" alt="Ronan" style="margin-left:160%;max-width:100%">
 		<p style="position: relative;left:180%;font-weight: bold;">Ronan O&#39;Dea &#8208; Committee Member</p>
 	<p style="position: relative;left:125%;width:200%;">Ronan O&#39;Dea is a post&#8208;graduate researcher at the Limerick Institute of Technology. He holds a BSc in Music Technology and Production awarded by the Limerick Institute of Technology. He is an active member of the Interactive Systems Research Group (ISRG) with an interest in psychoacoustics and human-computer interaction. He is currently pursuing a PhD with aim to evaluate the perception of reverberant auditory cues embedded within multimodal interfaces. He is a committe member of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
   </div>
     <div class="column">
-	<img src="JoeFitzpatrick.png" alt="Joe" style="margin-left: 310%">
+	<img src="JoeFitzpatrick.png" alt="Joe" style="margin-left: 310%;max-width:100%">
     <p style="position: relative;left:300%;font-weight: bold;">Joe Fitzpatrick &#8208; Committee Member</p>
 	<p style="position: relative;left:250%;width:200%;">Joe Fitzpatrick is currently a postgraduate researcher and a member of the Interactive Systems Research Group in Limerick Institute of Technology. He is currently concluding a PhD exploring how the principles of human auditory perception and Auditory Scene Analysis can be used in the design stages of sonification. Beyond this&#44; he has worked with various small to medium enterprises as an audio consultant which has involved prototyping listening devices&#44; extracting data from audio&#44; and facilitating both qualitative and quantitative user&#8208;studies.</p>
 	
@@ -628,17 +633,17 @@ left:50px;
   <h4></h4>
   	<div class="row">
 	 <div class="column">
-	 <img src ="PheobeSun.png" alt="Pheobe" style="margin-left:45%">
+	 <img src ="PheobeSun.png" alt="Pheobe" style="margin-left:45%;max-width:100%">
    	<p style="position: relative;left:60%;font-weight: bold;">Pheobe Sun &#8208; Committee Member</p>
 	<p style="width:200%" >Pheobe Sun is a PhD candidate in audio and speech quality of experience at the QxLab research group in the School of Computer Science at University College Dublin&#44; with an emphasis on the cognitive&#8208;perceptual experience. She obtained her primary degree and master&#39;s degree from Trinity College Dublin. She is also an interactive installation artist and a social experiment designer. Her previous research piece was carried out at the exhibition &#39;Intimacy&#39; in Science Gallery Dublin.</p>
 	</div>
 	  <div class="column">
-	<img src ="FlaithriNeff.jpg" alt="FlaithriNeff" style="margin-left:170%">
+	<img src ="FlaithriNeff.jpg" alt="FlaithriNeff" style="margin-left:170%;max-width:100%">
 		<p style="position: relative;left:180%;font-weight: bold;">Flaithri Neff &#8208; Committe Member</p>
 	<p style="position: relative;left:125%;width:200%;">Dr Flaithri Neff is a lecturer in Audio DSP and Acoustics at the Limerick Institute of Technology. He holds a MSc in Music Technology (University of Limerick) and a PhD in Computer Science (University College Cork). He established the Interactive Systems Research Group (ISRG) to bring together LIT researchers who are interested in modelling the auditory perceptual system with the aim of developing sonification applications for multimodal interfaces. Having an interest in audio standards&#44; he is also MPEG Convenor of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of ISO/IEC JTC 1/SC 29/WG 11.He is a musician and composer&#44; and has performed internationally with Riverdance&#44; the Afro Celt Sound System&#44; the Royal Scottish National Symphony Orchestra&#44; and for various film projects.</p>
   </div>
     <div class="column">
-	<img src="elifarnhill.jpg" alt="eli" style="margin-left: 290%">
+	<img src="elifarnhill.jpg" alt="eli" style="margin-left: 290%;max-width:100%">
     <p style="position: relative;left:310%;font-weight: bold;">Eli Farnhill&#8208; Committee Member</p>
 	<p style="position: relative;left:250%;width:200%;">Hello, I'm Eli Farnhill I'm a postgraduate researcher at Limerick Institute of Technology looking into Technology Enhanced Learning in Music Technology degrees I'm a graduate of the Music Technology & Production degree at Limerick Institute of Technology I've been playing music since I found a clarinet at age 5, and I've been messing around with audio since I found I could record onto my parents' tape deck I released my first commercial EP in 2019 titled "The Advance" which contains a mix of genres and sound manipulation techniques, ranging from digital effects to analogue looping systems Since graduating I've been working as a freelance mixing engineer in the local music scene</p>
 	
@@ -647,7 +652,7 @@ left:50px;
   <h4></h4>
   <div class="row">
    <div class="column">
-	 <img src ="patrickmark.jpg" alt="Patrick" style="margin-left:55%">
+	 <img src ="patrickmark.jpg" alt="Patrick" style="margin-left:55%;max-width:100%">
    	<p style="position: relative;left:60%;font-weight: bold;">Patrick mark &#8208; Committee Member</p>
 	<p style="width:200%" >Patrick Mark Duffy is a composer and postgraduate researcher at The Centre for Creative Informatics, ACADEmy Research Institute in Limerick Institute of Technology, Irelan</p>
 	</div>
@@ -665,7 +670,7 @@ left:50px;
 </div>
 <div class="bgimg-2"id="volunteers">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">AES IRELAND Volunteers</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white; -webkit-text-stroke: 1px black;">AES IRELAND Volunteers</span>
   </div>
 </div>
 
@@ -684,7 +689,7 @@ left:50px;
 </div>
 <div class="bgimg-2"id="past">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ; ;">AES IRELAND Volunteers</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black; ">AES IRELAND Volunteers</span>
   </div>
 </div>
 
@@ -692,7 +697,7 @@ left:50px;
   <div style="color:black;background-color:#white;text-align:center;padding:50px 80px;text-align: justify;">
 	<h1>Past Committee Members</h1>
 	<p>We are indebted to our past committee members for providing guidance&#44; leadership and direction for the AES Ireland Section over the years.</p>
-	<img src="EndaBates.jpg">
+	<img src="EndaBates.jpg" style="max-width:100%">
 	<p style="font-weight: bold;">Enda Bates &#8208; Treasurer</p>
 	<p>Dr Enda Bates is a composer&#44; musician&#44; producer and academic based in Dublin&#44; Ireland&#44; and an Assistant Professor and deputy director of the Music and Media Technologies programme in Trinity College Dublin. He obtained a B. Eng. in Electronic Engineering from Dublin City University in 2000&#44; an M. Phil. In Music & Media Technologies from Trinity College Dublin in 2004&#44; and in 2010 he completed a PhD at Trinity College Dublin entitled The Composition & Performance of Spatial Music. Current research interests include spatial audio&#44; psychoacoustics&#44; the aesthetics of electroacoustic music&#44; and the augmented electric guitar. He is an active composer and performer&#44; and a founder member of the Spatial Music Collective&#44; and is currently on the organizing committee for the 146th AES Convention to be held in Dublin in March 2019.</p>
 	<h4></h4>
@@ -703,7 +708,7 @@ left:50px;
 
 <div class="bgimg-3"id="events">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">PAST EVENTS</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black;">PAST EVENTS</span>
   </div>
 </div>
 
@@ -714,14 +719,14 @@ left:50px;
 </div>
 <div class="bgimg-3"id="membership">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white;">MEMBERSHIP
+  <span class="border" style="background-color:transparent;font-size:100px;color:white;-webkit-text-stroke: 1px black;">MEMBERSHIP
   </span>
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="background-color:white;text-align:center;padding:50px 80px;text-align: justify;color:black;">
-	<img src="aesmembers.png">
+	<img src="aesmembers.png" style="max-width:100%">
 	<p>A Member may be anyone active in audio engineering or acoustics who has an academic degree or the equivalent in scientific or professional experience in audio engineering and its allied arts and is familiar with the application of engineering principles and data in that field.
 	<br>
 	An Associate Member may be anyone who has an interest in audio engineering and in the society objectives&#44; but who does not yet have the degree or the equivalent in professional experience required of a Member. Associate membership includes all the privileges except voting&#44; holding office or chairmanships.
@@ -775,46 +780,46 @@ left:50px;
 </div>
 <div class="row"> 
   <div class="column">
-  <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image" style="width:50%">
- <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" class="image" style="width:50%">
- <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" class="image" style="width:50%">
-  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" class="image" style="width:50%">
-  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" class="image" style="width:50%">
-  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" class="image" style="width:50%">
-  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" class="image" style="width:50%">
-  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" class="image" style="width:50%">
+  <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image" style="width:50%;max-width:100%">
+ <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" class="image" style="width:50%;max-width:100%">
+ <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" class="image" style="width:50%;max-width:100%">
+  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" class="image" style="width:50%;max-width:100%">
+  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" class="image" style="width:50%;max-width:100%">
+  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" class="image" style="width:50%;max-width:100%">
+  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" class="image" style="width:50%;max-width:100%">
+  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" class="image" style="width:50%;max-width:100%">
   </div>
   <div class="column">
-  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" class="image" style="width:50%"></a>
-  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png" class="image" style="width:50%"></a>
-  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" class="image" style="width:50%"></a>
-  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" class="image" style="width:50%"></a>
-  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" class="image" style="width:50%"></a>
-  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" class="image" style="width:50%"></a>
-  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" class="image" style="width:50%"></a>
+  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" class="image" style="width:50%;max-width:100%"></a>
   </div>  
   <div class="column">
-  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" class="image" style="width:50%"></a>
-  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" class="image" style="width:50%"></a>
-  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" class="image" style="width:50%"></a>
-  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" class="image" style="width:50%"></a>
-  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" class="image" style="width:50%"></a>
-  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" class="image" style="width:50%"></a>
-  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" class="image" style="width:50%"></a>
+  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" class="image" style="width:50%;max-width:100%"></a>
   </div>
   <div class="column">
-  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" class="image" style="width:50%"></a>
-  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png" class="image" style="width:50%"></a>
-  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" class="image" style="width:50%"></a>
-  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" class="image" style="width:50%"></a>
-  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" class="image" style="width:50%"></a>
-  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" class="image" style="width:50%"></a>
-  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" class="image" style="width:50%"></a>
+  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" class="image" style="width:50%;max-width:100%></a>
+  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" class="image" style="width:50%;max-width:100%"></a>
   </div>
 </div>
 <div class="bgimg-3"id="students">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">STUDENTS</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black;">STUDENTS</span>
   </div>
 </div>
 
@@ -822,7 +827,7 @@ left:50px;
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;font-size:15px;text-align: justify;">
   <h1>Students</h1>
   <p>Our student community is vibrant and active. We recognise that students are the future of our industry and we support a range of student sections&#44; events and educational activities.</p>
-  <img src ="students.jpg">
+  <img src ="students.jpg" style="width:50%;max-width:100%">
   <h1>Student Membership</h1>
   <p>Being a Student Member of the Audio Engineering Society has never been more important&#44; as technology whips forward and many segments of our industry literally reinvent themselves. A successful career in audio must be built on future-proof knowledge and skills&#44; supported by a community of professionals who share your passion for audio and commitment to the highest audio quality.
 Audio Engineering Society Student Members receive a number of freebies and exclusive deals from world renowned audio companies. Join the AES today&#44; connect to the greatest professional and educational audio network and make use of the exciting benefits offered by our partners!
@@ -839,7 +844,7 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 </div>
 <div class="bgimg-3"id="groups">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">GROUPS</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black;">GROUPS</span>
 
   </div>
 </div>
@@ -847,30 +852,30 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 <div style="position:relative;">
   <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
   <h1>Dundalk Institute Of Technology</h1>
-  <a href="https://dkit.ie/" target="_blank"><img src="dkit.jpg" alt="dkit" class="groupimage"></a>
+  <a href="https://dkit.ie/" target="_blank"><img src="dkit.jpg" alt="dkit" class="groupimage" style="max-width:100%"></a>
   <p> DkIT is the focal point for higher education and research on the Belfast-Dublin corridor&#44; serving the North Leinster&#44; South Ulster region. Students and graduates are an important asset to this region and success is vital to its continued economic&#44; social and cultural growth.</p>
   <h2></h2>
    <h1>Limerick Institute Of Technology</h1>
-  <a href="https://www.lit.ie/" target="_blank"><img src="lit.jpg" alt="lit" class="groupimage"></a>
+  <a href="https://www.lit.ie/" target="_blank"><img src="lit.jpg" alt="lit" class="groupimage" style="max-width:100%"></a>
   <p> Limerick Institute of Technology is home to over 6&#44;500 students across vibrant campuses in Limerick city&#44; Thurles&#44; Clonmel and Ennis&#44; offering lively and enjoyable student experiences. We are also currently developing a new state of the art engineering focussed campus at Coonagh in Limerick.</p>
   <h2></h2>
    <h1>Maynooth University</h1>
-  <a href="http://musictech.cs.nuim.ie/" target="_blank"><img src="maynooth.jpg" alt="maynooth" class="groupimage"></a>
+  <a href="http://musictech.cs.nuim.ie/" target="_blank"><img src="maynooth.jpg" alt="maynooth" class="groupimage"style="max-width:100%"></a>
   <p> Maynooth University is a thriving research enterprise&#44; a vibrant and exciting place to learn&#44; and importantly&#44; is a university that places equal value on research and teaching.Maynooth engaged university with extensive research and teaching partnerships with enterprise&#44; public bodies&#44; civil society and community organisations.</p>
   <h2></h2>
    <h1>Trinity College Dublin</h1>
-  <a href="https://tcd.ie/" target="_blank"><img src="tcd.jpg" alt="tcd" class="groupimage"></a>
+  <a href="https://tcd.ie/" target="_blank"><img src="tcd.jpg" alt="tcd" class="groupimage"style="max-width:100%"></a>
   <p> Trinity College Dublin&#44; the University of Dublin they provide a liberal environment where independence of thought is highly valued and all are encouraged to achieve their potential. Promoting a diverse&#44; interdisciplinary&#44; inclusive environment which nurtures ground-breaking research&#44; innovation&#44; and creativity through engaging with issues of global significance.</p>
   <h2></h2>
   <h1>University College Dublin</h1>
-   <a href="https://www.ucd.ie/" target="_blank"><img src="ucd.jpg" alt="ucd" class="groupimage"></a>
+   <a href="https://www.ucd.ie/" target="_blank"><img src="ucd.jpg" alt="ucd" class="groupimage"style="max-width:100%"></a>
   <p> UCD is one of Europe&#39;s leading research-intensive universities; an environment where undergraduate education&#44; masters and PhD training&#44; research&#44; innovation and community engagement form a dynamic spectrum of activity</p>
   
   </div>
 </div>
 <div class="bgimg-3"id="contact">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:100px;color:white ;">CONTACT</span>
+  <span class="border" style="background-color:transparent;font-size:100px;color:white ;-webkit-text-stroke: 1px black;">CONTACT</span>
   </div>
 </div>
 
