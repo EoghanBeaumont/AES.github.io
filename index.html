@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>AES Ireland Section</title>
 <style>
 body, html {
   height: 100%;
@@ -25,11 +26,6 @@ a:visited {
   background-color: black;
   text-decoration: transparent;
 }
-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 a:hover {
   color: red;
   background-color: transparent;
@@ -40,21 +36,13 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-normal{
-left:20px;
-top:200px;
- z-index:4;
-
-
-}
-div.fixed {
-  position: fixed;
-  top: -5px;
-  left: 20px;
-  z-index:4;
-}
 .image{
-	opacity: 0.5;
+position: relative;
+left:50px;
+opacity: 0.5;
+width:50%;
+max-width:100%;
+	
 	
 }
 .image:hover {
@@ -66,22 +54,6 @@ div.fixed {
   transform: scale(1.2);
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
   opacity: 0.90;
@@ -91,9 +63,6 @@ div.fixed {
   background-size: cover;
   z-index:0;
 
-}
-h2 {
-  border-bottom: 3px solid black;
 }
 h4{
 	border-bottom: 3px solid black;
@@ -138,19 +107,6 @@ h4{
   position: relative;
   }
   
-.button {
-  background-color: transparent;
-  font-weight: bold;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
 #more {display: none;}
 
 .center {
@@ -161,88 +117,6 @@ h4{
   top:200px;
  
 }
-.slideshow {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-style: solid;
-  border-color: black;
-}
- 
- .slideshow .btnleft{
- position: absolute;
-  top: 275px;
-  left: 26.5%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: transparent;
-  color: white;
-  font-size: 60px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  z-index:5;
-}
- .slideshow .btnleft:hover{
-color:black;
-}
-.slideshow .btnright{
- position: absolute;
-  top: 275px;
-  left: 73.5%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: transparent;
-  color: white;
-  font-size: 60px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  z-index:5;
-}
- .slideshow .btnright:hover{
-color:black;
-}
-.btn-group button {
- 
-  border: grey;
-  color: white; 
-  margin-left :1px; 
-  cursor: pointer; 
-  float: left; 
-  height: 25px;
-  width: 25px;
-  position: relative;
-  left:1300px;
-  top:-30px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  z-index:5;
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #5e5e5e;
-}
-.btn-group button:focus{
-  background-color: #171717;
 }
 .bgimg-1 {
   background-image: url("audiostudio2.jpg");
@@ -294,12 +168,6 @@ color:black;
   clear: both;
 }
 
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
 .bar {
   height: 40px;
   width: 100px;
@@ -313,7 +181,7 @@ h3 {
    position: absolute;
   z-index:3;
   top: 310px;
-  min-width: 100%;
+  max-width: 100%;
   border-bottom: 1px solid yellow;
 
 }
@@ -329,7 +197,7 @@ h3 {
 
 .navbar a {
    float:left;
-  font-size: 16px;
+  font-size: 1vw;
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -343,11 +211,11 @@ h3 {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 1vw;  
   border: none;
   outline: none;
   color: white;
-  padding: 13px 16px;
+  padding: 16px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -415,11 +283,6 @@ ul {
 
 p.outset {border-style: outset;}
 
-.mySlides {
-display:none;
-left:50px;
-
-}
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .caption{
@@ -477,27 +340,9 @@ left:50px;
 			</div>
 		  
 </div>
-<!--
-<div class="bgimg-2"></div>
-<div class="bgimg-2">
-<div class="slideshow">
-  <img class="mySlides" src="red.jpg" style="width:100%">
-  <img class="mySlides" src="blue.png" style="width:100%">
-  <img class="mySlides" src="green.png" style="width:100%">
-  <button class="btnleft" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="btnright" onclick="plusDivs(1)">&#10095;</button>
-</div>
-<div class="btn-group">
-  <button onclick="sortDivs(1)"></button>
-  <button onclick="sortDivs(2)"></button>
-  <button onclick="sortDivs(3)"></button>
-  
-</div>
---> 
-
 <div class="bgimg-2"id="news">
   <div class="caption">
-  <span class="border">News</span>
+  <span class="border">NEWS</span>
   </div>
 </div>
 <div style="position:relative;">
@@ -702,7 +547,7 @@ left:50px;
 </div>
 <div class="bgimg-2"id="volunteers">
   <div class="caption">
-  <span class="border">AES IRELAND Volunteers</span>
+  <span class="border">AES IRELAND VOLUNTEERS</span>
   </div>
 </div>
 
@@ -721,7 +566,7 @@ left:50px;
 </div>
 <div class="bgimg-2"id="past">
   <div class="caption">
-  <span class="border">AES IRELAND Volunteers</span>
+  <span class="border">AES PAST MEMBERS</span>
   </div>
 </div>
 
@@ -812,41 +657,41 @@ left:50px;
 </div>
 <div class="row"> 
   <div class="column">
-  <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image" style="width:50%;max-width:100%">
- <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" class="image" style="width:50%;max-width:100%">
- <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" class="image" style="width:50%;max-width:100%">
-  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" class="image" style="width:50%;max-width:100%">
-  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" class="image" style="width:50%;max-width:100%">
-  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" class="image" style="width:50%;max-width:100%">
-  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" class="image" style="width:50%;max-width:100%">
-  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" class="image" style="width:50%;max-width:100%">
+  <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image">
+ <a href="https://www.bbc.com/" target="_blank"><img src="sustainingmembers/bbc.jpg" class="image">
+ <a href="https://www.cirrus.com/" target="_blank"><img src="sustainingmembers/cirrus_logic.png" class="image">
+  <a href="https://www.imaginationtech.com/" target="_blank"><img src="sustainingmembers/imagination.jpg" class="image">
+  <a href="https://www.monitoraudio.com/" target="_blank"><img src="sustainingmembers/monitor-audio.png" class="image">
+  <a href="http://www.prismsound.com/" target="_blank"><img src="sustainingmembers/prism-sound.png" class="image">
+  <a href="https://www.sonnox.com/" target="_blank"><img src="sustainingmembers/sonnox.png" class="image">
+  <a href="https://www.yamaha.com/en/about/research/" target="_blank"><img src="sustainingmembers/yamaha.jpg" class="image">
   </div>
   <div class="column">
-  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.arcam.co.uk/" target="_blank"><img src="sustainingmembers/arcam.jpg" class="image"></a>
+  <a href="https://www.bowerswilkins.com/en-gb" target="_blank"><img src="sustainingmembers/bowers-and-wilkins.png"class="image"></a>
+  <a href="https://www.dcsltd.co.uk/" target="_blank"><img src="sustainingmembers/dcs.png" class="image"></a>
+  <a href="https://uk.kef.com/" target="_blank"><img src="sustainingmembers/KEF.png" class="image"></a>
+  <a href="https://nugenaudio.com/" target="_blank"><img src="sustainingmembers/Nugen.png" class="image"></a>
+  <a href="https://www.qualcomm.com/" target="_blank"><img src="sustainingmembers/qualcomm-logo.png" class="image"></a>
+  <a href="https://www.soundonsound.com/" target="_blank"><img src="sustainingmembers/SOS.png" class="image"></a>
   </div>  
   <div class="column">
-  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="http://atcloudspeakers.co.uk/" target="_blank"><img src="sustainingmembers/ATC.png" class="image"></a>
+  <a href="https://calrec.com/" target="_blank"><img src="sustainingmembers/calrec.jpg" class="image"></a>
+  <a href="https://focusrite.com/en" target="_blank"><img src="sustainingmembers/focusrite.png" class="image"></a>
+  <a href="https://martin-audio.com/ target="_blank"><img src="sustainingmembers/martin-audio.png" class="image"></a>
+  <a href="http://www.oxford-digital.com/" target="_blank"><img src="sustainingmembers/oxford-digital.png" class="image"></a>
+  <a href="https://roli.com/" target="_blank"><img src="sustainingmembers/ROLI.png" class="image"></a>
+  <a href="https://www.solidstatelogic.com/" target="_blank"><img src="sustainingmembers/SLL.png" class="image"></a>
   </div>
   <div class="column">
-  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" class="image" style="width:50%;max-width:100%"></a>
-  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" class="image" style="width:50%;max-width:100%"></a>
+  <a href="https://www.autograph.co.uk/" target="_blank"><img src="sustainingmembers/autograph.png" class="image"></a>
+  <a href="https://celestion.com/" target="_blank"><img src="sustainingmembers/celestion.png" class="image"></a>
+  <a href="http://www.internationalaudiogroup.com/" target="_blank"><img src="sustainingmembers/IAG.png" class="image"></a>
+  <a href="https://www.meridian-audio.com/" target="_blank"><img src="sustainingmembers/Meridian.png" class="image"></a>
+  <a href="https://pmc-speakers.com/" target="_blank"><img src="sustainingmembers/PMC.png" class="image"></a>
+  <a href="https://rycote.com/" target="_blank"><img src="sustainingmembers/rycote.png" class="image"></a>
+  <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" class="image"></a>
   </div>
 </div>
 <div class="bgimg-3"id="students">
@@ -886,19 +731,19 @@ For details of student member benefits please go <a href="https://www.aes.org/st
   <h1>Dundalk Institute Of Technology</h1>
   <a href="https://dkit.ie/" target="_blank"><img src="dkit.jpg" alt="dkit" class="groupimage" style="max-width:100%"></a>
   <p> DkIT is the focal point for higher education and research on the Belfast-Dublin corridor&#44; serving the North Leinster&#44; South Ulster region. Students and graduates are an important asset to this region and success is vital to its continued economic&#44; social and cultural growth.</p>
-  <h2></h2>
+  <h4></h4>
    <h1>Limerick Institute Of Technology</h1>
   <a href="https://www.lit.ie/" target="_blank"><img src="lit.jpg" alt="lit" class="groupimage" style="max-width:100%"></a>
   <p> Limerick Institute of Technology is home to over 6&#44;500 students across vibrant campuses in Limerick city&#44; Thurles&#44; Clonmel and Ennis&#44; offering lively and enjoyable student experiences. We are also currently developing a new state of the art engineering focussed campus at Coonagh in Limerick.</p>
-  <h2></h2>
+  <h4></h4>
    <h1>Maynooth University</h1>
   <a href="http://musictech.cs.nuim.ie/" target="_blank"><img src="maynooth.jpg" alt="maynooth" class="groupimage"style="max-width:100%"></a>
   <p> Maynooth University is a thriving research enterprise&#44; a vibrant and exciting place to learn&#44; and importantly&#44; is a university that places equal value on research and teaching.Maynooth engaged university with extensive research and teaching partnerships with enterprise&#44; public bodies&#44; civil society and community organisations.</p>
-  <h2></h2>
+  <h4></h4>
    <h1>Trinity College Dublin</h1>
   <a href="https://tcd.ie/" target="_blank"><img src="tcd.jpg" alt="tcd" class="groupimage"style="max-width:100%"></a>
   <p> Trinity College Dublin&#44; the University of Dublin they provide a liberal environment where independence of thought is highly valued and all are encouraged to achieve their potential. Promoting a diverse&#44; interdisciplinary&#44; inclusive environment which nurtures ground-breaking research&#44; innovation&#44; and creativity through engaging with issues of global significance.</p>
-  <h2></h2>
+  <h4></h4>
   <h1>University College Dublin</h1>
    <a href="https://www.ucd.ie/" target="_blank"><img src="ucd.jpg" alt="ucd" class="groupimage"style="max-width:100%"></a>
   <p> UCD is one of Europe&#39;s leading research-intensive universities; an environment where undergraduate education&#44; masters and PhD training&#44; research&#44; innovation and community engagement form a dynamic spectrum of activity</p>
