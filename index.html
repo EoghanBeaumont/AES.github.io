@@ -396,8 +396,8 @@ p.outset {border-style: outset;}
 			</div>
 		  
 </div>
-<div class="popup" onclick="popup()">Click me to toggle the popup!
-  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+<div class="popup" onclick="popup()">
+  <span class="popuptext" id="myPopup">mobile</span>
 <div class="bgimg-2"id="news">
   <div class="caption">
   <span class="border">NEWS</span>
@@ -824,7 +824,11 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 
 
 <script>
-
+var w = window.innerWidth;
+if(w<991)
+{
+location.replace("https://eoghanbeaumont.github.io./mobile.html)
+}
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("navbar");
