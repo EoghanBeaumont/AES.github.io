@@ -288,22 +288,26 @@ p.outset {border-style: outset;}
   .caption{
     background-attachment: scroll;
   }
-  /* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 0%;
-  padding: 0px;
+  @media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navgbar a.icon {
+    float: right;
+    display: block;
+  }
 }
 
-.column img {
-  margin-top: 0px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: none;
-  clear: none;
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 }
@@ -322,8 +326,8 @@ p.outset {border-style: outset;}
 </div>
 <div class="bar"></div>
 
-<div class="navbar" id="navbar">
-<a href="#home" class="fa fa-home"></i>
+<div class="navbar" id="myNavbar">
+<a href="#home" class="fa fa-home"></a>
 <a href="#news">News</a>
 <div class="dropdown">
     <button class="dropbtn">About
@@ -356,8 +360,11 @@ p.outset {border-style: outset;}
 	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
 	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
 			</div>
+	<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="showmore()">&#9776;</a>
+			
 		  
 </div>
+
 <div class="bgimg-2"id="news">
   <div class="caption">
   <span class="border">NEWS</span>
@@ -819,6 +826,14 @@ function showDivs(n) {
     x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+}
+function showmore() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = navbar";
+  }
 }
 </script>
 
