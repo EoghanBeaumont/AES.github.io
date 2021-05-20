@@ -201,9 +201,23 @@ h4{
   color: white;
   padding: 12px 16px;
   text-decoration: none;
+  display: block;
 }
 .navbar-right {
   float: right;
+}
+
+.navbar #myLinks {
+  display: none;
+}
+
+
+.navbar a.icon {
+  background: #003d99;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .dropdown {
   float: left;
@@ -305,43 +319,31 @@ p.outset {border-style: outset;}
     </div>
 </div>
 <div class="bar"></div>
-
 <div class="navbar" id="navbar">
-<a href="#home" class="fa fa-home"></i>
-<a href="#news">News</a>
-<a href="mobile.html">mobile</a>
-<div class="dropdown">
-    <button class="dropbtn">About
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#about">About</a>
-      <a href="#community">AES IRELAND SECTION</a>
-      <a href="#volunteers">AES Ireland Volunteers</a>
-	  <a href="#past">AES Ireland Past Members</a>
-    </div>
-  </div>
-  <a href="#events">Events</a>
-  <a href="#membership">Membership</a>
-  <a href="#students">Students</a>
-   <a href="#groups">Groups</a>
-     	    <div class="dropdown">
-    <button class="dropbtn">Policies
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="policies.html#termsandconditions">Terms and Conditions</a>
-      <a href="policies.html#privacypolicy">Privacy Policy</a>
-      <a href="policies.html#cookiepolicy">Cookie Policy</a>
-    </div>
-	</div>
-	 <div class="navbar-right">
+  <a href="#home" class="fa fa-home"></a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="#news">News</a>
+	<a href="#about">About</a>
+    <a href="#community">AES IRELAND SECTION</a>
+    <a href="#volunteers">AES Ireland Volunteers</a>
+	<a href="#past">AES Ireland Past Members</a>
+	<a href="#events">Events</a>
+	<a href="#membership">Membership</a>
+	<a href="#students">Students</a>
+	<a href="#groups">Groups</a>
+	<a href="policies.html#termsandconditions">Terms and Conditions</a>
+    <a href="policies.html#privacypolicy">Privacy Policy</a>
+    <a href="policies.html#cookiepolicy">Cookie Policy</a>
 	<a href="#contact">Contact</a>
 	<a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
 	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
 	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
-			</div>
-		  
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="showmore()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 <div class="bgimg-2"id="news">
   <div class="caption">
@@ -441,113 +443,57 @@ p.outset {border-style: outset;}
 	<h1>AES Ireland Section Committee</h1>
 	<p>The AES Ireland Section committee work on a purely voluntary basis to run the events&#44; activities and campaigns of the section. They work in a wide range of audio related commercial businesses and academia.</p>
 	<h4></h4>
-	<div class="row">
- <div class="column">
-	<img src="JoeTimoney.jpg" alt="Joe"style="margin-left:40%;max-width:100%">
-	</div>
-	 <div class="column">
-	<img src="RokaiaJedir.jpg" alt="Rokaia" style="margin-left:200%;max-width:100%">
-	</div>
-	<div class="column">
-	<img src="alexwilson.png" alt="Alex" style="margin-left: 300%;max-width:100%">
-	</div>
-</div>
-<div class="row">
- <div class="column">
-	
-   	<p style="position: relative;left:70%;font-weight: bold;width:200%;">Joe Timoney &#8208; Chair</p>
-	<p style="width:200%" >Dr Joe Timoney completed his PhD in Electronic Engineering at TCD&#44; Ireland in 1998. He joined the Dept. of Computer Science at Maynooth University in the following year. He teaches on undergraduate programs in Computer Science and in Music Technology. His research interests are based in the area of audio signal processing&#44; with a focus on musical sound synthesis and the digital modelling of analogue subtractive synthesizers. He is also a DIY electronics enthusiast and has participated in a number of national Maker Fairs as part of the Maynooth University club. He has a member of the Audio Engineering Society for over 10 years.</p>
-  </div>
-    <div class="column">
-	<p style="position: relative;left:202%;font-weight:bold;width:200%;">Rokaia Jedir &#8208; vice Chair</p>
-	<p style="position: relative;left:125%;width:200%;">Rokaia Jedir is a postgraduate researcher at the Interactive Systems Research Group (ISRG)&#44; Limerick Institute of Technology. In 2018 she graduated with a first-class honours BSc degree in Music Technology & Production&#44; and is currently pursuing a MSc degree with intentions to transfer to PhD in 2020. Her primary research interests include psychoacoustics&#44; working memory&#44; and human&#8208;computer interaction in general. Currently&#44; her research is dedicated to developing a computational model of human working memory (WM) as applied to the auditory perceptual system&#44; aimed at contributing to the development of next-generation multimodal interface design. She is a committee member of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
-  </div>
-    <div class="column">
-    <p style="position: relative;left:305%;font-weight: bold;width:200%;">Alex Wilson &#8208; Secretary Position</p>
-	<p style="position: relative;left:250%;width:200%;">Alex Wilson is currently a postdoctoral research fellow in the Acoustics Research Centre at the University of Salford&#44; investigating the perception of object&#8208;based audio technologies while teaching digital signal processing. He received a PhD from the same institution in 2017&#44; which covered the areas of audio quality&#44; popular music&#44; accessibility and automated mixing&#44; and has produced three papers for the Journal of the AES. He was the co&#8208;chair and organiser of the 3rd Workshop on Intelligent Music Production and has contributed to conferences and workshops organised by the UK section of the AES. A native of Dublin&#44; in a past life&#44; he studied experimental physics at Maynooth University while recording excessive amounts of music in a bedroom studio.</p>
-	
-  </div>
-</div>
+<img src="JoeTimoney.jpg">
+<p style="font-weight: bold;">Joe Timoney &#8208; Chair</p>
+Dr Joe Timoney completed his PhD in Electronic Engineering at TCD&#44; Ireland in 1998. He joined the Dept. of Computer Science at Maynooth University in the following year. He teaches on undergraduate programs in Computer Science and in Music Technology. His research interests are based in the area of audio signal processing&#44; with a focus on musical sound synthesis and the digital modelling of analogue subtractive synthesizers. He is also a DIY electronics enthusiast and has participated in a number of national Maker Fairs as part of the Maynooth University club. He has a member of the Audio Engineering Society for over 10 years.</p>
+	<img src="RokaiaJedir.jpg" alt="Rokaia">
+	<p>Rokaia Jedir &#8208; vice Chair</p>
+	<p>Rokaia Jedir is a postgraduate researcher at the Interactive Systems Research Group (ISRG)&#44; Limerick Institute of Technology. In 2018 she graduated with a first-class honours BSc degree in Music Technology & Production&#44; and is currently pursuing a MSc degree with intentions to transfer to PhD in 2020. Her primary research interests include psychoacoustics&#44; working memory&#44; and human&#8208;computer interaction in general. Currently&#44; her research is dedicated to developing a computational model of human working memory (WM) as applied to the auditory perceptual system&#44; aimed at contributing to the development of next-generation multimodal interface design. She is a committee member of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
 	<h4></h4>
-		<div class="row">
- <div class="column">
-	 <img src ="MalachyRonan.jpg" alt="Malachy"style="margin-left:35%;max-width:100%" >
-	</div>
-	 <div class="column">
-	<img src ="RonanODea.jpg" alt="Ronan" style="margin-left:160%;max-width:100%">
-	</div>
-	<div class="column">
-	<img src="JoeFitzpatrick.png" alt="Joe" style="margin-left: 310%;max-width:100%">
-	</div>
-</div>
-	<div class="row">
-	 <div class="column">
-   	<p style="position: relative;left:60%;font-weight: bold;width:200%;">Malachy Ronan &#8208; Committe Member</p>
-	<p style="width:200%" >Dr. Malachy Ronan is an Assistant Lecturer at the Limerick Institute of Technology. He holds MSc in Music Technology and PhD in Perception and Audio Engineering degrees from the University of Limerick. A member of the AES since 2014&#44; he has disseminated research at various AES outlets and is co-chair for student volunteers at AES 146. Current research interests include perception and signal processing.</p>
-	</div>
-	  <div class="column">
-		<p style="position: relative;left:180%;font-weight: bold;width:200%;">Ronan O&#39;Dea &#8208; Committee Member</p>
-	<p style="position: relative;left:125%;width:200%;">Ronan O&#39;Dea is a post&#8208;graduate researcher at the Limerick Institute of Technology. He holds a BSc in Music Technology and Production awarded by the Limerick Institute of Technology. He is an active member of the Interactive Systems Research Group (ISRG) with an interest in psychoacoustics and human-computer interaction. He is currently pursuing a PhD with aim to evaluate the perception of reverberant auditory cues embedded within multimodal interfaces. He is a committe member of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
-  </div>
-    <div class="column">
-    <p style="position: relative;left:300%;font-weight: bold;width:200%;">Joe Fitzpatrick &#8208; Committee Member</p>
-	<p style="position: relative;left:250%;width:200%;">Joe Fitzpatrick is currently a postgraduate researcher and a member of the Interactive Systems Research Group in Limerick Institute of Technology. He is currently concluding a PhD exploring how the principles of human auditory perception and Auditory Scene Analysis can be used in the design stages of sonification. Beyond this&#44; he has worked with various small to medium enterprises as an audio consultant which has involved prototyping listening devices&#44; extracting data from audio&#44; and facilitating both qualitative and quantitative user&#8208;studies.</p>
-	
-  </div>
-  </div>
-  <h4></h4>
-  <div class ="row">
-   <div class="column">
-	<img src ="PheobeSun.png" alt="Pheobe" style="margin-left:45%;max-width:100%">
-	</div>
-	 <div class="column">
-	<img src ="FlaithriNeff.jpg" alt="FlaithriNeff" style="margin-left:170%;max-width:100%">
-	</div>
-	<div class="column">
-	<img src="elifarnhill.jpg" alt="eli" style="margin-left: 290%;max-width:100%">
-	</div>
-	</div>
-  	<div class="row">
-	 <div class="column">
-   	<p style="position: relative;left:60%;font-weight: bold;width:200%;">Pheobe Sun &#8208; Committee Member</p>
-	<p style="width:200%" >Pheobe Sun is a PhD candidate in audio and speech quality of experience at the QxLab research group in the School of Computer Science at University College Dublin&#44; with an emphasis on the cognitive&#8208;perceptual experience. She obtained her primary degree and master&#39;s degree from Trinity College Dublin. She is also an interactive installation artist and a social experiment designer. Her previous research piece was carried out at the exhibition &#39;Intimacy&#39; in Science Gallery Dublin.</p>
-	</div>
-	  <div class="column">
-		<p style="position: relative;left:180%;font-weight: bold;width:200%;">Flaithri Neff &#8208; Committe Member</p>
-	<p style="position: relative;left:125%;width:200%;">Dr Flaithri Neff is a lecturer in Audio DSP and Acoustics at the Limerick Institute of Technology. He holds a MSc in Music Technology (University of Limerick) and a PhD in Computer Science (University College Cork). He established the Interactive Systems Research Group (ISRG) to bring together LIT researchers who are interested in modelling the auditory perceptual system with the aim of developing sonification applications for multimodal interfaces. Having an interest in audio standards&#44; he is also MPEG Convenor of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of ISO/IEC JTC 1/SC 29/WG 11.He is a musician and composer&#44; and has performed internationally with Riverdance&#44; the Afro Celt Sound System&#44; the Royal Scottish National Symphony Orchestra&#44; and for various film projects.</p>
-  </div>
-    <div class="column">
-    <p style="position: relative;left:310%;font-weight: bold;width:200%;">Eli Farnhill&#8208; Committee Member</p>
-	<p style="position: relative;left:250%;width:200%;">Hello, I'm Eli Farnhill I'm a postgraduate researcher at Limerick Institute of Technology looking into Technology Enhanced Learning in Music Technology degrees I'm a graduate of the Music Technology & Production degree at Limerick Institute of Technology I've been playing music since I found a clarinet at age 5, and I've been messing around with audio since I found I could record onto my parents' tape deck I released my first commercial EP in 2019 titled "The Advance" which contains a mix of genres and sound manipulation techniques, ranging from digital effects to analogue looping systems Since graduating I've been working as a freelance mixing engineer in the local music scene</p>
-	
-  </div>
-  </div>
-  <h4></h4>
-  <img src ="patrickmark.jpg" alt="Patrick" style="margin-left:10%;max-width:100%">
-  <div class="row">
-   <div class="column">
-   	<p style="position: relative;left:60%;font-weight: bold;width:200%;">Patrick mark &#8208; Committee Member</p>
-	<p style="width:200%" >Patrick Mark Duffy is a composer and postgraduate researcher at The Centre for Creative Informatics, ACADEmy Research Institute in Limerick Institute of Technology, Irelan</p>
-	</div>
-    <div class="column">
-	<p style="position: relative;left:190%;font-weight:bold;width:200%;">Andrew Hines &#8208; Committee Member</p>
-	<p style="position: relative;left:125%;width:200%;">Dr Hines is an assistant professor in the School of Computer Science at University College Dublin. His primary research interests are in speech&#44; audio and video signal processing. He has active research collaborations applying machine learning models to health applications and cryptosystems. He has developed computational metrics for estimating speech and audio quality as well as for predicting speech intelligibility for people with hearing impairments. Recent work has looked at predicting quality and location accuracy for spatial audio. Dr Hines is a funded investigator in both the SFI CONNECT research centre for future networks and INSIGHT research centre for data analytics. He has represented Ireland on the management committee of Qualinet&#44; an FP7 European COST Action&#44; where he led a task force focused on using machine learning to develop Quality of Experience (QoE) models. He is a senior member of the IEEE&#44; member of the AES. He is facilities chair for the AES146 convention in Dublin in 2019&#44; publicity chair for ACM MMVE 2019 and general chair for IEEE QoMEX 2020</p>
-  </div>
-    <div class="column">
-    	<p style="position: relative;left:305%;font-weight: bold;width:200%;">Brian Hunt &#8208; Committee Member</p>
-	<p style="position: relative;left:250%;width:200%;">Studied Telecommunications in Kevin Street 1974&#8208;1978. Joined BBC TV London in 1978 working in Special Projects&#44; Studio Engineering.  Work included delivering programme focussed communications facilities for General Elections&#44; Budget programmes&#44; Children in Need&#44; Royal Wedding&#44; Olympic Games and other major sporting events.  In 1989&#44; joined the BBC TV&#39;s capital projects department called P&ID Tel.  Work involved planning and designing replacement studio infrastructure.  Responsible for designing the replacement DTMF signalling system that replaced the old 17 Hz control line system throughout the BBC.  This required the new equipment to be BABT tested prior to use. In 1992&#44; became the regional manager in Sligo and the NW for a company involved with digital TV EU projects&#44; MMDS and cable TV.  In 1995&#44; set up AVA Systems to offer broadcast&#44; audio visual engineering services and acoustic consultancy and design.</p>
-	
+	<img src="alexwilson.png" alt="Alex">
+    <p>Alex Wilson &#8208; Secretary Position</p>
+	Alex Wilson is currently a postdoctoral research fellow in the Acoustics Research Centre at the University of Salford&#44; investigating the perception of object&#8208;based audio technologies while teaching digital signal processing. He received a PhD from the same institution in 2017&#44; which covered the areas of audio quality&#44; popular music&#44; accessibility and automated mixing&#44; and has produced three papers for the Journal of the AES. He was the co&#8208;chair and organiser of the 3rd Workshop on Intelligent Music Production and has contributed to conferences and workshops organised by the UK section of the AES. A native of Dublin&#44; in a past life&#44; he studied experimental physics at Maynooth University while recording excessive amounts of music in a bedroom studio.</p>
+	<h4></h4>
+	<img src ="MalachyRonan.jpg" alt="Malachy">
+		<p>Malachy Ronan &#8208; Committe Member</p>
+	<p>Dr. Malachy Ronan is an Assistant Lecturer at the Limerick Institute of Technology. He holds MSc in Music Technology and PhD in Perception and Audio Engineering degrees from the University of Limerick. A member of the AES since 2014&#44; he has disseminated research at various AES outlets and is co-chair for student volunteers at AES 146. Current research interests include perception and signal processing.</p>
+	<h4></h4>
+	<img src ="RonanODea.jpg" alt="Ronan">
+	<p>Ronan O&#39;Dea &#8208; Committee Member</p>
+	<p>Ronan O&#39;Dea is a post&#8208;graduate researcher at the Limerick Institute of Technology. He holds a BSc in Music Technology and Production awarded by the Limerick Institute of Technology. He is an active member of the Interactive Systems Research Group (ISRG) with an interest in psychoacoustics and human-computer interaction. He is currently pursuing a PhD with aim to evaluate the perception of reverberant auditory cues embedded within multimodal interfaces. He is a committe member of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of the international standards working group ISO/IEC JTC 1/SC 29/WG 11.</p>
+	<h4></h4>
+	<img src="JoeFitzpatrick.png" alt="Joe">
+	<p>Joe Fitzpatrick &#8208; Committee Member</p>
+	<p>Joe Fitzpatrick is currently a postgraduate researcher and a member of the Interactive Systems Research Group in Limerick Institute of Technology. He is currently concluding a PhD exploring how the principles of human auditory perception and Auditory Scene Analysis can be used in the design stages of sonification. Beyond this&#44; he has worked with various small to medium enterprises as an audio consultant which has involved prototyping listening devices&#44; extracting data from audio&#44; and facilitating both qualitative and quantitative user&#8208;studies.</p>
+	<h4></h4>
+	<img src ="PheobeSun.png" alt="Pheobe">
+	<p>Pheobe Sun &#8208; Committee Member</p>
+	<p>Pheobe Sun is a PhD candidate in audio and speech quality of experience at the QxLab research group in the School of Computer Science at University College Dublin&#44; with an emphasis on the cognitive&#8208;perceptual experience. She obtained her primary degree and master&#39;s degree from Trinity College Dublin. She is also an interactive installation artist and a social experiment designer. Her previous research piece was carried out at the exhibition &#39;Intimacy&#39; in Science Gallery Dublin.</p>
+	<h4></h4>
+	<img src ="FlaithriNeff.jpg" alt="FlaithriNeff">
+	<p>Flaithri Neff &#8208; Committe Member</p>
+	<p>Dr Flaithri Neff is a lecturer in Audio DSP and Acoustics at the Limerick Institute of Technology. He holds a MSc in Music Technology (University of Limerick) and a PhD in Computer Science (University College Cork). He established the Interactive Systems Research Group (ISRG) to bring together LIT researchers who are interested in modelling the auditory perceptual system with the aim of developing sonification applications for multimodal interfaces. Having an interest in audio standards&#44; he is also MPEG Convenor of TC 02/SC 03/WG 01&#44; a NSAI mirror committee of ISO/IEC JTC 1/SC 29/WG 11.He is a musician and composer&#44; and has performed internationally with Riverdance&#44; the Afro Celt Sound System&#44; the Royal Scottish National Symphony Orchestra&#44; and for various film projects.</p>
+	<h4></h4>
+	<img src="elifarnhill.jpg" alt="eli">
+	<p>Eli Farnhill&#8208; Committee Member</p>
+	<p>Hello, I'm Eli Farnhill I'm a postgraduate researcher at Limerick Institute of Technology looking into Technology Enhanced Learning in Music Technology degrees I'm a graduate of the Music Technology & Production degree at Limerick Institute of Technology I've been playing music since I found a clarinet at age 5, and I've been messing around with audio since I found I could record onto my parents' tape deck I released my first commercial EP in 2019 titled "The Advance" which contains a mix of genres and sound manipulation techniques, ranging from digital effects to analogue looping systems Since graduating I've been working as a freelance mixing engineer in the local music scene</p>
+	<h4></h4>
+	<img src ="patrickmark.jpg" alt="Patrick">
+	<p>Patrick mark &#8208; Committee Member</p>
+	<p>Patrick Mark Duffy is a composer and postgraduate researcher at The Centre for Creative Informatics, ACADEmy Research Institute in Limerick Institute of Technology, Ireland</p>
+	<h4></h4>
+	<p>Andrew Hines &#8208; Committee Member</p>
+	<p>Dr Hines is an assistant professor in the School of Computer Science at University College Dublin. His primary research interests are in speech&#44; audio and video signal processing. He has active research collaborations applying machine learning models to health applications and cryptosystems. He has developed computational metrics for estimating speech and audio quality as well as for predicting speech intelligibility for people with hearing impairments. Recent work has looked at predicting quality and location accuracy for spatial audio. Dr Hines is a funded investigator in both the SFI CONNECT research centre for future networks and INSIGHT research centre for data analytics. He has represented Ireland on the management committee of Qualinet&#44; an FP7 European COST Action&#44; where he led a task force focused on using machine learning to develop Quality of Experience (QoE) models. He is a senior member of the IEEE&#44; member of the AES. He is facilities chair for the AES146 convention in Dublin in 2019&#44; publicity chair for ACM MMVE 2019 and general chair for IEEE QoMEX 2020</p>
+	<h4></h4>
+	<p>Brian Hunt &#8208; Committee Member</p>
+	<p>Studied Telecommunications in Kevin Street 1974&#8208;1978. Joined BBC TV London in 1978 working in Special Projects&#44; Studio Engineering.  Work included delivering programme focussed communications facilities for General Elections&#44; Budget programmes&#44; Children in Need&#44; Royal Wedding&#44; Olympic Games and other major sporting events.  In 1989&#44; joined the BBC TV&#39;s capital projects department called P&ID Tel.  Work involved planning and designing replacement studio infrastructure.  Responsible for designing the replacement DTMF signalling system that replaced the old 17 Hz control line system throughout the BBC.  This required the new equipment to be BABT tested prior to use. In 1992&#44; became the regional manager in Sligo and the NW for a company involved with digital TV EU projects&#44; MMDS and cable TV.  In 1995&#44; set up AVA Systems to offer broadcast&#44; audio visual engineering services and acoustic consultancy and design.</p>
+	<h4></h4>
+	 <img src ="KevinGarland.jpg" alt="Kevin">
+	 <p>Kelvin Garland &#8208; Committee Member</p>
+	Postgraduate Researcher at The Centre for Creative Informatics, Limerick Institute of Technology, Ireland. Research topics include human-computer interaction, user-centered design, and audio technology.</p>
   </div>
 </div>
-<h4></h4>
-  <img src ="KevinGarland.jpg" alt="Kevin" style="margin-left:10%;max-width:100%">
-  <div class="row">
-   <div class="column">
-   	<p style="position: relative;left:55%;font-weight: bold;width:200%;">Patrick mark &#8208; Committee Member</p>
-	<p style="width:200%" >Postgraduate Researcher at The Centre for Creative Informatics, Limerick Institute of Technology, Ireland. Research topics include human-computer interaction, user-centered design, and audio technology.</p>
-	</div>
-</div>
-</div>
+
 <div class="bgimg-2"id="volunteers">
   <div class="caption">
   <span class="border">AES IRELAND VOLUNTEERS</span>
@@ -804,6 +750,14 @@ function showDivs(n) {
     x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+}
+function showmore() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
 </script>
 
