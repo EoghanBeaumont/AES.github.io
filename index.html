@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+<body onload="mobilecheck()">
 <title>AES Ireland Section</title>
 <style>
 body, html {
@@ -12,8 +13,7 @@ body, html {
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
-  scroll-behavior: smooth;
-  
+  scroll-behavior: smooth;  
 }
 <style>
 a:link {
@@ -308,7 +308,6 @@ p.outset {border-style: outset;}
 <div class="navbar" id="navbar">
 <a href="#home" class="fa fa-home"></i>
 <a href="#news">News</a>
-<a href="mobile.html">mobile</a>
 <div class="dropdown">
     <button class="dropbtn">About
       <i class="fa fa-caret-down"></i>
@@ -768,11 +767,7 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 
 
 <script>
-var w = window.innerWidth;
-if(w<991)
-{
-location.replace("https://eoghanbeaumont.github.io./mobile.html)
-}
+
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("navbar");
@@ -807,6 +802,13 @@ function showDivs(n) {
     x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+}
+function mobilecheck() {
+  var x =screen.width;
+  if(x<991)
+  {
+  location.replace("https://eoghanbeaumont.github.io./mobile.html")
+  }
 }
 </script>
 
