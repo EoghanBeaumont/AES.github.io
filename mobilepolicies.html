@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+  scroll-behavior: smooth;
+  
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  min-width: 100%;
+   height: auto;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #003d99;
+  color: #fff;
+  background-color:transparent;
+  font-size:7vw;
+  -webkit-text-stroke: 1px black;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #003d99;
+   position: relative;
+  z-index:3;
+  top:0px;
+  min-width: 100%;
+  border-bottom: 1px solid yellow;
+
+}
+
+.navbar-right {
+  float: right;
+}
+
+.sticky {
+  top: 0px;
+  position: fixed;
+}
+
+.navbar a {
+   float:left;
+  font-size: 16px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.navbar-right {
+  float: right;
+}
+
+.navbar #myLinks {
+  display: none;
+}
+
+
+.navbar a.icon {
+  background: #003d99;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 13px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #4c77b7;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #003d99;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #4c77b7;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#more {display: none;}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.90;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:0;
+
+}
+.bgimg-1 {
+  background-image: url("audiostudio2.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("audiostudio2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("audiostudio2.jpg");
+  min-height: 400px;
+}
+ .fa {
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+ 
+  color: white;
+}
+
+.fa-twitter {
+  
+  color: white;
+}
+</style>
+</head>
+<html>
+<body>
+<div class="navbar" id="navbar">
+  <a href="#home" class="fa fa-home"></a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="mobile.html#news">News</a>
+	<a href="mobile.html#about">About</a>
+    <a href="mobile.html#community">AES IRELAND SECTION</a>
+    <a href="mobile.html#volunteers">AES Ireland Volunteers</a>
+	<a href="mobile.html#past">AES Ireland Past Members</a>
+	<a href="mobile.html#events">Events</a>
+	<a href="mobile.html#membership">Membership</a>
+	<a href="mobile.html#students">Students</a>
+	<a href="mobile.html#groups">Groups</a>
+	<a href="#termsandconditions">Terms and Conditions</a>
+    <a href="#privacypolicy">Privacy Policy</a>
+    <a href="#cookiepolicy">Cookie Policy</a>
+	<a href="#contact">Contact</a>
+	<a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
+	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
+	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="showmore()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div class="bgimg-3"id="termsandconditions">
+  <div class="caption">
+  <span class="border">TERMS AND CONDITIONS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+ <p>Terms and conditions of use
+
+1.      Introduction
+<br>
+1.1    These terms and conditions shall govern your use of our website.
+<br>
+1.2    By using our website&#44; you accept these terms and conditions in full; accordingly&#44; if you disagree with these terms and conditions or any part of these terms and conditions&#44; you must not use our website.
+<br>
+1.3    If you use any of our website services&#44; we will ask you to expressly agree to these terms and conditions.
+<br>
+1.5    Our website uses cookies; by using our website or agreeing to these terms and conditions&#44; you consent to our use of cookies in accordance with the terms of our privacy and cookies policy.
+<br>
+2.      Credit
+<br>
+2.1    This document was created using a template from SEQ Legal (https://seqlegal.com).
+<br>
+3.      Copyright notice
+<br>
+3.1    Copyright (c) 2019 Audio Engineering Society UK Section
+<br>
+3.2    Subject to the express provisions of these terms and conditions:
+<br>
+(a)    we&#44; together with our licensors&#44; own and control all the copyright and other intellectual property rights in our website and the material on our website; and
+<br>
+(b)    all the copyright and other intellectual property rights in our website and the material on our website are reserved.
+<br>
+4.      Licence to use website
+<br>
+4.1    You may:
+<br>
+(a)    view pages from our website in a web browser;
+<br>
+(b)    download pages from our website for caching in a web browser;
+<br>
+(c)    print pages from our website;
+<br>
+(d)    stream audio and video files from our website and
+<br>
+(e)    use our website services by means of a web browser&#44;
+<br>
+subject to the other provisions of these terms and conditions.
+<br>
+4.3    You may only use our website for your own personal and business purposes&#44; and you must not use our website for any other purposes.
+<br>
+4.4    Except as expressly permitted by these terms and conditions&#44; you must not edit or otherwise modify any material on our website.
+<br>
+4.5    Unless you own or control the relevant rights in the material&#44; you must not:
+<br>
+(a)    republish material from our website (including republication on another website);
+<br>
+(b)    sell&#44; rent or sub-license material from our website;
+<br>
+(c)    show any material from our website in public;
+<br>
+(d)    exploit material from our website for a commercial purpose; or
+<br>
+(e)    redistribute material from our website.
+<br>
+4.6    Notwithstanding Section 4.5&#44; you may redistribute our newsletter in print and electronic form to any person.
+<br>
+4.7    We reserve the right to restrict access to areas of our website&#44; or indeed our whole website&#44; at our discretion; you must not circumvent or bypass&#44; or attempt to circumvent or bypass&#44; any access restriction measures on our website.
+<br>
+5.      Acceptable use
+<br>
+5.1    You must not:
+<br>
+(a)    use our website in any way or take any action that causes&#44; or may cause&#44; damage to the website or impairment of the performance&#44; availability or accessibility of the website;
+<br>
+(b)    use our website in any way that is unlawful&#44; illegal&#44; fraudulent or harmful&#44; or in connection with any unlawful&#44; illegal&#44; fraudulent or harmful purpose or activity;
+<br>
+(c)    use our website to copy&#44; store&#44; host&#44; transmit&#44; send&#44; use&#44; publish or distribute any material which consists of (or is linked to) any spyware&#44; computer virus&#44; Trojan horse&#44; worm&#44; keystroke logger&#44; rootkit or other malicious computer software;
+<br>
+(d)    conduct any systematic or automated data collection activities (including without limitation scraping&#44; data mining&#44; data extraction and data harvesting) on or in relation to our website without our express written consent;
+<br>
+(g)    use data collected from our website for any direct marketing activity (including without limitation email marketing&#44; SMS marketing&#44; telemarketing and direct mailing).
+<br>
+5.2    You must not use data collected from our website to contact individuals&#44; companies or other persons or entities.
+<br>
+5.3    You must ensure that all the information you supply to us through our website&#44; or in relation to our website&#44; is true&#44; accurate&#44; current&#44; complete and non-misleading.
+<br>
+6.      Registration and accounts
+<br>
+6.2    You may register for an account with our website by completing and submitting the account registration form on our website&#44; and clicking on the verification link in the email that the website will send to you.
+<br>
+6.3    You must not allow any other person to use your account to access the website.
+<br>
+6.4    You must notify us in writing immediately if you become aware of any unauthorised use of your account.
+<br>
+6.5    You must not use any other person&#39;s account to access the website
+<br>
+7.      User login details
+<br>
+7.1    If you register for an account with our website&#44; you will be asked to choose a user ID and password.
+<br>
+7.2    Your user ID must not be liable to mislead and must comply with the content rules set out in Section 10; you must not use your account or user ID for or in connection with the impersonation of any person.
+<br>
+7.3    You must keep your password confidential.
+<br>
+7.4    You must notify us in writing immediately if you become aware of any disclosure of your password.
+<br>
+7.5    You are responsible for any activity on our website arising out of any failure to keep your password confidential&#44; and may be held liable for any losses arising out of such a failure.
+<br>
+8.      Cancellation and suspension of account
+<br>
+8.1    We may:
+<br>
+(a)    suspend your account;
+<br>
+(b)    cancel your account; and/or
+<br>
+(c)    edit your account details&#44;
+<br>
+at any time in our sole discretion without notice or explanation.
+<br>
+8.2    You may cancel your account on our website using your account control panel on the website.
+<br>
+9.      Your content: licence
+<br>
+9.1    In these terms and conditions&#44; &#34;your content&#34; means all works and materials (including without limitation text&#44; graphics&#44; images&#44; audio material&#44; video material&#44; audio-visual material&#44; scripts&#44; software and files) that you submit to us or our website for storage or publication on&#44; processing by&#44; or transmission via&#44; our website.
+<br>
+9.2    You grant to us a worldwide&#44; irrevocable&#44; non-exclusive&#44; royalty-free licence to reproduce&#44; store and publish your content on and in relation to this website and any successor website
+<br>
+9.3    You grant to us the right to sub-license the rights licensed under Section 9.2.
+<br>
+9.4    You grant to us the right to bring an action for infringement of the rights licensed under Section 9.2.
+<br>
+9.5    You hereby waive all your moral rights in your content to the maximum extent permitted by applicable law; and you warrant and represent that all other moral rights in your content have been waived to the maximum extent permitted by applicable law.
+<br>
+9.6    You may edit your content to the extent permitted using the editing functionality made available on our website.
+<br>
+9.7    Without prejudice to our other rights under these terms and conditions&#44; if you breach any provision of these terms and conditions in any way&#44; or if we reasonably suspect that you have breached these terms and conditions in any way&#44; we may delete&#44; unpublish or edit any or all of your content.
+<br>
+10.    Your content: rules
+<br>
+10.1  You warrant and represent that your content will comply with these terms and conditions.
+<br>
+10.2  Your content must not be illegal or unlawful&#44; must not infringe any person&#39;s legal rights&#44; and must not be capable of giving rise to legal action against any person (in each case in any jurisdiction and under any applicable law).
+<br>
+10.3  Your content&#44; and the use of your content by us in accordance with these terms and conditions&#44; must not:
+<br>
+(a)    be libellous or maliciously false;
+<br>
+(b)    be obscene or indecent;
+<br>
+(c)    infringe any copyright&#44; moral right&#44; database right&#44; trade mark right&#44; design right&#44; right in passing off&#44; or other intellectual property right;
+<br>
+(d)    infringe any right of confidence&#44; right of privacy or right under data protection legislation;
+<br>
+(e)    constitute negligent advice or contain any negligent statement;
+<br>
+(f)    constitute an incitement to commit a crime[&#44; instructions for the commission of a crime or the promotion of criminal activity];
+<br>
+(g)    be in contempt of any court&#44; or in breach of any court order;
+<br>
+(h)    be in breach of racial or religious hatred or discrimination legislation;
+<br>
+(i)     be blasphemous;
+<br>
+(j)    be in breach of official secrets legislation;
+<br>
+(k)    be in breach of any contractual obligation owed to any person;
+<br>
+(l)     depict violence in an explicit&#44; graphic or gratuitous manner;
+<br>
+(m)   be pornographic&#44; lewd&#44; suggestive or sexually explicit;
+<br>
+(n)    be untrue&#44; false&#44; inaccurate or misleading;
+<br>
+(o)    consist of or contain any instructions&#44; advice or other information which may be acted upon and could&#44; if acted upon&#44; cause illness&#44; injury or death&#44; or any other loss or damage;
+<br>
+(p)    constitute spam;
+<br>
+(q)    be offensive&#44; deceptive&#44; fraudulent&#44; threatening&#44; abusive&#44; harassing&#44; anti-social&#44; menacing&#44; hateful&#44; discriminatory or inflammatory; or
+<br>
+(r)    cause annoyance&#44; inconvenience or needless anxiety to any person.
+<br>
+11.    Limited warranties
+<br>
+11.1  We do not warrant or represent:
+<br>
+(a)    the completeness or accuracy of the information published on our website;
+<br>
+(b)    that the material on the website is up to date; or
+<br>
+(c)    that the website or any service on the website will remain available.
+<br>
+11.2  We reserve the right to discontinue or alter any or all of our website services&#44; and to stop publishing our website&#44; at any time in our sole discretion without notice or explanation; and save to the extent expressly provided otherwise in these terms and conditions&#44; you will not be entitled to any compensation or other payment upon the discontinuance or alteration of any website services&#44; or if we stop publishing the website.
+<br>
+11.3  To the maximum extent permitted by applicable law and subject to Section 12.1&#44; we exclude all representations and warranties relating to the subject matter of these terms and conditions&#44; our website and the use of our website.
+<br>
+12.    Limitations and exclusions of liability
+<br>
+12.1  Nothing in these terms and conditions will:
+<br>
+(a)    limit or exclude any liability for death or personal injury resulting from negligence;
+<br>
+(b)    limit or exclude any liability for fraud or fraudulent misrepresentation;
+<br>
+(c)    limit any liabilities in any way that is not permitted under applicable law; or
+<br>
+(d)    exclude any liabilities that may not be excluded under applicable law.
+<br>
+12.2  The limitations and exclusions of liability set out in this Section 12 and elsewhere in these terms and conditions:
+<br>
+(a)    are subject to Section 12.1; and
+<br>
+(b)    govern all liabilities arising under these terms and conditions or relating to the subject matter of these terms and conditions&#44; including liabilities arising in contract&#44; in tort (including negligence) and for breach of statutory duty&#44; except to the extent expressly provided otherwise in these terms and conditions.
+<br>
+12.3  To the extent that our website and the information and services on our website are provided free of charge&#44; we will not be liable for any loss or damage of any nature.
+<br>
+12.4  We will not be liable to you in respect of any losses arising out of any event or events beyond our reasonable control.
+<br>
+12.5  We will not be liable to you in respect of any business losses&#44; including (without limitation) loss of or damage to profits&#44; income&#44; revenue&#44; use&#44; production&#44; anticipated savings&#44; business&#44; contracts&#44; commercial opportunities or goodwill.
+<br>
+12.6  We will not be liable to you in respect of any loss or corruption of any data&#44; database or software.
+<br>
+12.7  We will not be liable to you in respect of any special&#44; indirect or consequential loss or damage.
+<br>
+12.8  You accept that we have an interest in limiting the personal liability of our officers and employees and&#44; having regard to that interest&#44; you acknowledge that we are a limited liability entity; you agree that you will not bring any claim personally against our officers or employees in respect of any losses you suffer in connection with the website or these terms and conditions (this will not&#44; of course&#44; limit or exclude the liability of the limited liability entity itself for the acts and omissions of our officers and employees).
+<br>
+13.    Breaches of these terms and conditions
+<br>
+13.1  Without prejudice to our other rights under these terms and conditions&#44; if you breach these terms and conditions in any way&#44; or if we reasonably suspect that you have breached these terms and conditions in any way&#44; we may:
+<br>
+(a)    send you one or more formal warnings;
+<br>
+(b)    temporarily suspend your access to our website;
+<br>
+(c)    permanently prohibit you from accessing our website;
+<br>
+(d)    block computers using your IP address from accessing our website;
+<br>
+(e)    contact any or all of your internet service providers and request that they block your access to our website;
+<br>
+(f)    commence legal action against you&#44; whether for breach of contract or otherwise; and/or
+<br>
+(g)    suspend or delete your account on our website.
+<br>
+ 
+13.2  Where we suspend or prohibit or block your access to our website or a part of our website&#44; you must not take any action to circumvent such suspension or prohibition or blocking
+<br>
+14.    Variation
+<br>
+14.1  We may revise these terms and conditions from time to time.
+<br>
+14.2  The revised terms and conditions shall apply to the use of our website from the date of publication of the revised terms and conditions on the website&#44; and you hereby waive any right you may otherwise have to be notified of&#44; or to consent to&#44; revisions of these terms and conditions.] OR [We will give you written notice of any revision of these terms and conditions&#44; and the revised terms and conditions will apply to the use of our website from the date that we give you such notice; if you do not agree to the revised terms and conditions&#44; you must stop using our website.
+<br>
+14.3  If you have given your express agreement to these terms and conditions&#44; we will ask for your express agreement to any revision of these terms and conditions; and if you do not give your express agreement to the revised terms and conditions within such period as we may specify&#44; we will disable or delete your account on the website&#44; and you must stop using the website.
+<br>
+15.    Assignment
+<br>
+15.1  You hereby agree that we may assign&#44; transfer&#44; sub-contract or otherwise deal with our rights and/or obligations under these terms and conditions.
+<br>
+15.2  You may not without our prior written consent assign&#44; transfer&#44; sub-contract or otherwise deal with any of your rights and/or obligations under these terms and conditions.
+<br>
+16.    Severability
+<br>
+16.1  If a provision of these terms and conditions is determined by any court or other competent authority to be unlawful and/or unenforceable&#44; the other provisions will continue in effect.
+<br>
+16.2  If any unlawful and/or unenforceable provision of these terms and conditions would be lawful or enforceable if part of it were deleted&#44; that part will be deemed to be deleted&#44; and the rest of the provision will continue in effect.
+<br>
+17.    Third party rights
+<br>
+17.1  A contract under these terms and conditions is for our benefit and your benefit&#44; and is not intended to benefit or be enforceable by any third party.
+<br>
+17.2  The exercise of the parties&#39; rights under a contract under these terms and conditions is not subject to the consent of any third party.
+<br>
+18.    Entire agreement
+<br>
+18.1  Subject to Section 12.1&#44; these terms and conditions[&#44; together with [our privacy and cookies policy]&#44;] shall constitute the entire agreement between you and us in relation to your use of our website and shall supersede all previous agreements between you and us in relation to your use of our website.
+<br>
+19.    Law and jurisdiction
+<br>
+19.1  These terms and conditions shall be governed by and construed in accordance with [English law].
+<br>
+19.2  Any disputes relating to these terms and conditions shall be subject to the non-exclusive jurisdiction of the courts of England.
+<br>
+20.    Statutory and regulatory disclosures
+<br>
+21.    Our details
+<br>
+21.1  This website is owned and operated by Audio Engineering Society UK Section.
+<br>
+21.4  You can contact us:
+<br>
+(b)    using our website contact form;
+<br>
+(d)    by email&#44; using the email address published on our website from time to time.</p>
+</div>
+</div>
+<div class="bgimg-3"id="privacypolicy">
+  <div class="caption">
+  <span class="border">PRIVACY POLICY</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+AES UK Section is dedicated to protecting your privacy when you visit or communicate with our site or personnel. The Privacy Policy offered here&#44; along with our terms of use&#44; offers an explanation regarding any personal data you may provide to us or that we garner from you.
+<br>
+The Policy may be changed occasionally to update you regarding any changes&#44; so please make sure you review the Privacy Policy.
+<br>
+1. Data and Information Collected
+To operate our website it is essential to collect or process certain data&#44; such as the following:
+<br>
+1.1 Information regarding your visits to our website&#44; any resources you used such as traffic data&#44; location data&#44; weblogs&#44; and any communication data (these items are included&#44; but not limited to those specified).
+<br>
+1.2 Any data collected from communications to us from you&#44; for any reason.
+<br>
+2. How we use Cookies
+It is possible that we may gather information regarding your computer for our services.  This collection of data is used for statistical analysis about our website for our own use.
+<br>
+Any information shared will not identify who you are&#44; but rather be mathematical data about our visitors and their use on our site.  The data does not give out any personal details.
+<br>
+Cookies may be used to gather this general internet data.  When used&#44; cookies are downloaded to your computer without prompting.  The cookie file is stored on your hard drive&#44; where files are transferred to.  This information helps us improve our site and services to you.
+<br>
+All computers can block cookies by activating proper browser settings.  There is a place to enable you to decline cookies under the options menu.  Please note if you decline cookies you may experience limited access to certain areas of our site.
+<br>
+3. Information Use
+Any information collected and stored regarding you is to enable us to offer better services to you.  We may also use the data collected for the following:
+<br>
+3.1 We may use data you provided in order to offer you information you asked for from our site&#44; in direct relation to our services.  We may also send information we feel might interest you&#44; as long as you have consented to such communications.
+<br>
+3.2 We may&#44; with your permission&#44; pass your details on to a third party who may be appointed specifically to deal with your request.
+<br>
+3.3 Any commitments we made to you may require use of your information&#44; used only to fulfil your request.
+<br>
+3.4 We may use your information to explain any changes our website has undergone such as structural or service/ product modifications&#44; which could affect our service to you.
+<br>
+3.5 If you do not wish communication from our website or a third party you will be given the opportunity to decline said communication.  We will not allow your information collected while you were on our site to be used by us or a third party if the consent is withheld.
+<br>
+4. Personal Data Storage
+<br>
+4.1 It is possible that we may collect transfer data from you regarding locations outside of the European Economic Area.  This information is used for storing and processing.  It may be processed by staff outside the European Economic Area&#44; by a company who works for us or a supplier we have.  An example is where we may process and conclude your order by using payment details or offering support services.  You have agreed to this communication by processing and finalising your order.  At any time you provide personal data&#44; you agree to a transfer for processing and storage.  We take all reasonable steps to ensure the safety of the data transfer in agreement with this privacy policy.
+<br>
+4.2 Data you provide us with will be stored on secure servers.  Any transaction details will be encrypted to provide you safety.
+<br>
+4.3 Transmission of data via the internet is never completely secure&#44; thus a guarantee of data sent electronically or transmitted cannot be given.  Information offered is therefore at your own risk.  If given a password or chosen to obtain a password&#44; you can access the secure section&#44; requiring the password to remain confidential by you&#44; as your responsibility.
+<br>
+5. Sharing Your Information
+<br>
+5.1 If applicable&#44; we may share your personal information to any Audio Engineering Society region or organisation.
+<br>
+5.2 Personal Information may be shared with third parties:
+<br>
+5.2.1 If we sell part or all of our business or assets we may share personal information to a third party.
+<br>
+5.2.2 When legally requested&#44; we may share your information.
+<br>
+5.2.3 Fraud protection and to minimise credit risk may require a sharing of your information.
+<br>
+6. Third Party Links
+Third Party Links to websites on our website are not included in our privacy policy.  You will need to check their privacy policy regarding data.  We do not accept liability or responsibility for third party links and their privacy policies.
+<br>
+7. Information Access
+The Data Protection Act 1998 provides you with rights to access any information we may collect and store about you.  If you wish to have access to this information it may be subject to a &#163;10 payment fee&#44; used to cover our costs regarding the information you requested.  If you wish to access this data please provide contact details below.
+<br>
+8. Contacting Us
+We are happy to receive any queries&#44; comments&#44; or requests you may have regarding our Privacy Policy.  Feel free and do not hesitate to use the online form to contact us.
+</div>
+</div>
+<div class="bgimg-3"id="cookiepolicy">
+  <div class="caption">
+  <span class="border">COOKIE POLICY</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:white;4;text-align:center;padding:50px 80px;text-align: justify;">
+  This website does not store any information that would&#44; on its own&#44; allow us to identify individual users of this service without their permission. Any cookies that may be used by this website are used either solely on a per session basis or to maintain user preferences.
+  <br>
+  Cookies are not shared with any third parties. These cookies are set only after the visitor has given consent.
+  <br>
+  You can block cookies by activating the settings on your browser that allows you to refuse the setting of all or some cookies. However&#44; if you use your browser settings to block all cookies (including essential cookies) you may not be able to access all or parts of this site.
+  </div>
+  </div>
+
+</body>
+</html>
+<script>
+function showmore() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
