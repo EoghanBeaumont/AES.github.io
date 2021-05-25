@@ -3,6 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <body onload="mobilecheck()">
@@ -281,6 +282,70 @@ ul {
   color: white;
 }
 
+}
+.mySlides {display: none}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev,.next{
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  color: white;
+   background-color:transparent;
+   border-style: none;
+  font-weight: bold;
+  font-size: 45px;
+}
+.next{
+  right:0;
+
+}
+.prev:hover,.next:hover{
+    background: rgba(0, 0, 0, 0.5);
+
+}
+.dot{
+  background-color:#a6a6a6;
+  position:relative;
+    border-radius: 50%;
+	border-style: none;
+	height: 25px;
+	width: 25px;
+	cursor: pointer; /* Pointer/hand icon */
+	float: left; /* Float the buttons side by side */
+	top:-70px;
+	left:900px;
+	margin-left :5px 
+}
+.dot:hover{
+  background-color:#808080;
+}
+.dot:focus {
+  background-color:#5a5a5a;
+}
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: -20px;
+  left:-490px;
+  width: 100%;
+  text-align: center;
+}
+.Header{
+	color: black;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: relative;
+  left:0%;
+  width: 100%;
+  text-align: center;
+}
+
 p.outset {border-style: outset;}
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
@@ -348,55 +413,37 @@ p.outset {border-style: outset;}
 </div>
 <div style="position:relative;">
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-  <div>
-  <input type="checkbox" class="read-more-state" id="post-2" />
-  <ul class="read-more-wrap">
-    <li style="font-size:30px">The Human Tuning Fork and AES Ireland AGM</li>
-	<li style="font-size:15px">29TH FEBRUARY 2020</li>
-	<li><img src="newstuningfork.jpg" style="max-width:100%"></li>
-    <li class="read-more-target" style="font-size:15px">Meeting Topic: &#39;The Human Tuning Fork&#39; and AES Ireland AGM</li>
-    <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
-	<li class="read-more-target" style="font-size:15px">Speaker Name: Fiona Smyth (Trinity College Dublin)</li>
-	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: &#8226; Election of Officers</li>
-	<li class="read-more-target" style="font-size:15px">&#8226; Website and social media</li>
-	<li class="read-more-target" style="font-size:15px">&#8226; Treasurer&#39;s report</li>
-	<li class="read-more-target" style="font-size:15px">&#8226; Meeting planning</li>
-	<li class="read-more-target" style="font-size:15px">Meeting Location: Seminar Room 1&#44; Parsons Building&#44; Trinity College Dublin</li>
-	<li class="read-more-target" style="font-size:15px">Summary</li>
-	<li class="read-more-target" style="font-size:15px">Dr. Fiona Smyth gave a talk on the first independent acoustic consultant in Britain or Ireland&#44; Dublin-born architect Hope Bagenal (1888-1979). She described his life and work including Abbey Road studios, St. Paul&#39;s Cathedral&#44; the Assembly Chamber at Imperial Delhi, and Dublin&#39;s Carleton Cinema. Hope Bagenal&#39;s life story connects the disciplines of science&#44; music, and architecture. Interestingly&#44; music was part of his method of analysis and informally, he became known as &#39;The Human Tuning Fork&#39;.</li>
-  </ul>
-  
-  <label for="post-2" class="read-more-trigger"></label>
-</div>
-
-  <h4></h4>
-  <div>
-  <input type="checkbox" class="read-more-state" id="post-3" />
-   <ul class="read-more-wrap">
-    <li style="font-size:30px">Object-based Audio & Spatial Audio</li>
-	<li style="font-size:15px"> 20TH NOVEMBER 2019</li>
-    <li class="read-more-target" style="font-size:15px">Meeting Topic: Object-based Audio & Spatial Audio/li>
-    <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
-	<li class="read-more-target" style="font-size:15px">Speaker Name: Alex Wilson (University of Huddersfield)&#44; Hugh O&#39;Dwyer (Trinity College Dublin)</li>
-	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Web presence&#44; Treasurer report&#44; Event Planning&#44; Sponsorship&#44; Diversity</li>
-	<li class="read-more-target" style="font-size:15px">Meeting Location: Trinity College Dublin&#44; Dublin&#44; Ireland</li>
-	<li class="read-more-target" style="font-size:15px">&#8226; Treasurer&#39;s report</li>
-	<li class="read-more-target" style="font-size:15px">&#8226; Meeting planning</li>
-	<li class="read-more-target" style="font-size:15px">Meeting Location: Seminar Room 1&#44; Parsons Building&#44; Trinity College Dublin</li>
-	<li class="read-more-target" style="font-size:15px">Summary</li>
-	<li class="read-more-target" style="font-size:15px">Alex Wilson began the meeting with a lecture entitled &#34;Listener-centric design of audio systems: adapting playback to users&#39; needs and preferences&#34;. Alex first introduced concepts related to object-based audio delivery along with potential benefits to the user&#44; and challenges to the system designers. The design and evaluation of an interactive audio renderer was then discussed. He explained that the system explored in the lecture was designed to allow the creation of personalised audio mixes based on feedback from the user. Applications for this proof-of-concept were then discussed.</li>
-	<li class="read-more-target" style="font-size:15px">Hugh O&#39;Dwyer&#39;s lecture&#44; entitled &#34;Novel Methods for the Analysis and Assessment of Spatial Audio&#34;&#44; focused on three primary topics. He first described a comparative study evaluating the perceived quality of Ambisonic microphones assessed using subjective listening tests of recordings and a directional encoding analysis of the B-format signals. He then discussed two virtual headphone testing methodologies demonstrating the validity of presenting headphone recordings&#44; and stimuli filtered using headphone transfer functions&#44; to assess the quality of headphones. Lastly&#44; he explained how deep neural networks can be used to model sound source localization (elevation and distance) in binaural signals.</li>
-  </ul>
-  <label for="post-3" class="read-more-trigger"></label>
+  <div class="slideshow-container">
+  <div class="mySlides">
+   <div class="Header">Blue test</div>
+  <img src="blue.png" style="width:100%">
+   <div class="text">blue</div>
   </div>
-  <h4></h4>
-  
+  <div class="mySlides">
+   <div class="Header">Green test</div>
+  <img src="green.png" style="width:100%">
+   <div class="text">green</div>
+  </div>
+   <div class="mySlides">
+   <div class="Header">Red test</div>
+  <img src="red.jpg" style="width:100%">
+   <div class="text">red</div>
+  </div>
+
+  <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="next" onclick="plusDivs(1)">&#10095;</button>
+  <button class="dot" onclick="selectDivs(1)"></button>
+  <button class="dot"  onclick="selectDivs(2)"></button>
+  <button class="dot"  onclick="selectDivs(3)"></button>
+</div>
+</div>
   
 </div>
 
 <div class="bgimg-2"id="about">
   <div class="caption">
   <span class="border">ABOUT</span>
+  
   </div>
 </div>
 
@@ -592,12 +639,169 @@ p.outset {border-style: outset;}
 <div class="bgimg-3"id="events">
   <div class="caption">
   <span class="border">PAST EVENTS</span>
+  
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Past event infomation.</p>
+   <div>
+  <input type="checkbox" class="read-more-state" id="post-1" />
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">The Human Tuning Fork and AES Ireland AGM</li>
+	<li style="font-size:15px">29TH FEBRUARY 2020</li>
+	<li class="read-more-target" style="font-size:15px"><img src="newstuningfork.jpg" style="max-width:100%"></li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: &#39;The Human Tuning Fork&#39; and AES Ireland AGM</li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Fiona Smyth (Trinity College Dublin)</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: &#8226; Election of Officers</li>
+	<li class="read-more-target" style="font-size:15px">&#8226; Website and social media</li>
+	<li class="read-more-target" style="font-size:15px">&#8226; Treasurer&#39;s report</li>
+	<li class="read-more-target" style="font-size:15px">&#8226; Meeting planning</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Seminar Room 1&#44; Parsons Building&#44; Trinity College Dublin</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">Dr. Fiona Smyth gave a talk on the first independent acoustic consultant in Britain or Ireland&#44; Dublin-born architect Hope Bagenal (1888-1979). She described his life and work including Abbey Road studios, St. Paul&#39;s Cathedral&#44; the Assembly Chamber at Imperial Delhi, and Dublin&#39;s Carleton Cinema. Hope Bagenal&#39;s life story connects the disciplines of science&#44; music, and architecture. Interestingly&#44; music was part of his method of analysis and informally, he became known as &#39;The Human Tuning Fork&#39;.</li>
+	<li class="read-more-target" style="font-size:15px">Article posted by Joseph Timoney</li>
+  </ul>
+  
+  <label for="post-1" class="read-more-trigger"></label>
+</div>
+
+  <h4></h4>
+  <div>
+  <input type="checkbox" class="read-more-state" id="post-2" />
+   <ul class="read-more-wrap">
+    <li style="font-size:30px">Object-based Audio & Spatial Audio</li>
+	<li style="font-size:15px"> 20TH NOVEMBER 2019</li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: Object-based Audio & Spatial Audio/li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Enda Bates</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Alex Wilson (University of Huddersfield)&#44; Hugh O&#39;Dwyer (Trinity College Dublin)</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Web presence&#44; Treasurer report&#44; Event Planning&#44; Sponsorship&#44; Diversity</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Trinity College Dublin&#44; Dublin&#44; Ireland</li>
+	<li class="read-more-target" style="font-size:15px">&#8226; Treasurer&#39;s report</li>
+	<li class="read-more-target" style="font-size:15px">&#8226; Meeting planning</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Seminar Room 1&#44; Parsons Building&#44; Trinity College Dublin</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">Alex Wilson began the meeting with a lecture entitled &#34;Listener-centric design of audio systems: adapting playback to users&#39; needs and preferences&#34;. Alex first introduced concepts related to object-based audio delivery along with potential benefits to the user&#44; and challenges to the system designers. The design and evaluation of an interactive audio renderer was then discussed. He explained that the system explored in the lecture was designed to allow the creation of personalised audio mixes based on feedback from the user. Applications for this proof-of-concept were then discussed.</li>
+	<li class="read-more-target" style="font-size:15px">Hugh O&#39;Dwyer&#39;s lecture&#44; entitled &#34;Novel Methods for the Analysis and Assessment of Spatial Audio&#34;&#44; focused on three primary topics. He first described a comparative study evaluating the perceived quality of Ambisonic microphones assessed using subjective listening tests of recordings and a directional encoding analysis of the B-format signals. He then discussed two virtual headphone testing methodologies demonstrating the validity of presenting headphone recordings&#44; and stimuli filtered using headphone transfer functions&#44; to assess the quality of headphones. Lastly&#44; he explained how deep neural networks can be used to model sound source localization (elevation and distance) in binaural signals.</li>
+	<li class="read-more-target" style="font-size:15px">Article posted by Joseph Timoney</li>
+  </ul>
+  <label for="post-2" class="read-more-trigger"></label>
+  </div>
+  <h4></h4>
+     <div>
+  <input type="checkbox" class="read-more-state" id="post-3" />
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">Parallel Computing for Audio</li>
+	<li style="font-size:15px">3RD OCTOBER 2019</li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: Parallel Computing for Audio</li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Joe Timoney</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Prof. Victor Lazzarini</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Web presence, treasurer’s report, event planning, sponsorship, diversity, AOB</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Maynooth University, Maynooth, Co. Kildare, Ireland</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">This lecture explored parallel computing for audio applications. Forms of parallelism were examined and applications for sound and music computing discussed. Heterogenous/Homogenous computing for Audio DSP was described in terms of its characteristics and applications. Finally, a new audio processing technique for Parallel Time-varying Convolution was introduced.</li>
+	<li class="read-more-target" style="font-size:15px">Article posted by Joseph Timoney</li>
+  </ul>
+  
+  <label for="post-3" class="read-more-trigger"></label>
+</div>
+<h4></h4>
+     <div>
+  <input type="checkbox" class="read-more-state" id="post-4" />
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">Auditory Perception</li>
+	<li style="font-size:15px">10TH JUNE 2019</li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: Auditory Perception</li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Dr. Kerry Hagan, Dr. Malachy Ronan, Dr. Flaithri Neff</li>
+	<li class="read-more-target" style="font-size:15px"><img src="AuditoryPerception.jpg" style="max-width:100%"></li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Rokaia Jedir(LIT), Joe Fitzpatrick (LIT), Ronan O’Dea(LIT), Tom Brophy (LIT), Dave O’Mahony(UL), Simon Jennings (LCCC)</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Web presence, Treasurer report, Event Planning, Sponsorship.</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: CSG 001, Computer Science and Information Systems Building, University of Limerick, Limerick, Ireland</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">17:30-18:00 SpADE tour</li>
+	<li class="read-more-target" style="font-size:15px">Attendees were treated to a tour of the University of Limerick’s Spatialization and Auditory Display Environment (SpADE) by principal investigator and AES member Dr. Kerry Hagan. This impressive 32.2 channel system comprises the highest resolution loudspeaker array in the Republic of Ireland and is designed for both artistic and perceptual research. The facility is open to visiting researchers and particularly welcomes spatial audio research projects.</li>
+	<li class="read-more-target" style="font-size:15px">18:00-19:00 Lightning talks</li>
+	<li class="read-more-target" style="font-size:15px">Five short talks of 8 minutes duration were followed by 2 minutes of questions. Rokaia, Joe, Ronan, and Tom are researchers in the Interactive Systems Research Group (ISRG) located in Limerick Institute of Technology. Dave is a researcher in the Digital Media and Arts Research Centre (DMARC) at the University of Limerick.</li>
+	<li class="read-more-target" style="font-size:15px">Speaker 1: Rokaia Jedir</li>
+	<li class="read-more-target" style="font-size:15px">Title: Towards a Computational Model of Auditory Working Memory
+Rokaia described her current research exploring the design of a computational model of working memory that incorporates psychoacoustic principles, attention maintenance, capacity limits, and links to long-term memory. She provided an overview of the findings of a user-study examining auditory-disruption during concurrent visual recall tasks.</li>
+<li class="read-more-target" style="font-size:15px">Speaker 2: Joe Fitzpatrick</li>
+<li class="read-more-target" style="font-size:15px">Title: The Perceptually Congruent Sonification (PerCS) Framework
+Joe’s talk described his work towards the provision of accessible web-based guidelines that facilitate the design of sonification applications. Designed to be used with existing sonification strategies, his research focuses on how stream segregation affects sonification applications with multiple auditory streams. The overall goal is to link relevant perceptual phenomena to sonification mappings and provide a systematic approach to identifying and addressing perceptually-driven problems in applied sonification.</li>
+<li class="read-more-target" style="font-size:15px">Speaker 3: Ronan O’Dea</li>
+<li class="read-more-target" style="font-size:15px">Title: A Computational Model of the Perception of Reverberant Cues
+Ronan’s presentation described his work to develop a computational model of reverberant environments. This model will be used to develop a machine-learning implementation that identifies and classifies sound sources in reverberant environments. One attendee inquired whether Ronan had considered using this model in Augmented reality applications and this is one of the intended applications for this model.</li>
+<li class="read-more-target" style="font-size:15px">Speaker 4: Tom Brophy</li>
+<li class="read-more-target" style="font-size:15px">Title: A Modular Weighted Model to Resolve Opposing Perceptual Cues in Auditory Scene Analysis
+Tom described his work towards modelling the methods that the auditory system uses to form a coherent auditory stream from competing auditory cues. The novelty in this model is the use of a weighting system to resolve opposing perceptual cues. Furthermore, the modular nature of this model facilitates its implementation in machine hearing systems that can be used to detect and predict events of biological significance.</li>
+<li class="read-more-target" style="font-size:15px">Speaker 5: Dave O’Mahony</li>
+<li class="read-more-target" style="font-size:15px">Title: Real-time Manipulation of Synthesis Parameters using a Brainwave Interface and a Eurorack Modular Synthesizer
+Dave delivered an informal presentation and demonstration of a brainwave controlled Eurorack modular synthesiser. A laptop running Max/MSP software receives input from a user wearing an Interaxon muse (bluetooth) brainwave sensing headband. These electrical signals vary depending on the action of the performer or their emotional state. A Max/MSP patch transforms these signals into 4 discrete control voltages and these are connected to a mofular synthesiser via a mutable Instruments CV-P interface. These control voltages are then processed in a Eurorack modular synthesiser according to the composer’s aesthetic preference. Attendees were invited to experiment with this synthesiser.</li>
+<li class="read-more-target" style="font-size:15px">19:15-19:45: Main Presentation</li>
+<li class="read-more-target" style="font-size:15px">Speaker: Simon Jennings</li>
+<li class="read-more-target" style="font-size:15px">Title: Noise Action Plan 2018-2023</li>
+<li class="read-more-target" style="font-size:15px">Simon described the steps being taken by Limerick City & County Council to avoid, prevent, and reduce noise exposure as outlined in the Environmental Noise directive (2002/49/EC). This directive includes provisions for train passages, airplane take off and landings, and road usage but only road use is relevant to Limerick due to the size of the region. Simon elaborated on the work done to estimate and map population exposure to various noise bands and identify noise hotspots. Simon then explained how these hotspots were further assessed using noise modelling and onsite monitoring in order to identify potential mitigation measures and deliver a cost-benefit analysis for Transport Infrastructure Ireland (TII). The policy measures to prevent noise exposure and protect ‘quiet areas’ were outlined and Simon finished by highlighting the issues arising during the execution of this plan and how they will feed into their approach to the next Noise Action Plan.</li>
+<li class="read-more-target" style="font-size:15px">One attendee enquired as to whether a noise action plan was mandatory for each council and Simon stated that it was voluntary. Another attendee asked whether this approach be formalised into a quantitative rating of noise for a house like BER? Simon suggested that this would be suitable at an executive level but public sentiment would not be positive if the rating was impacting the price of their homes.</li>
+<li class="read-more-target" style="font-size:15px">Written By: Malachy Ronan</li>
+
+  </ul>
+  
+  <label for="post-4" class="read-more-trigger"></label>
+</div>
+<h4></h4>
+  <div>
+  <input type="checkbox" class="read-more-state" id="post-5" />
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">Analysing expressive Musical Performances</li>
+	<li style="font-size:15px">14TH MAY 2019</li>
+	<li class="read-more-target" style="font-size:15px"><img src="ExpressiveMusical.jpg" style="max-width:100%"></li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: Analysing expressive Musical Performances</li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Joe Timoney</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Dr. Leandro Costalonga</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Web presence, Treasurer report, Upcoming events, student section, sponsorship</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: Maynooth University, Co. Kildare, Ireland</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">Computer-generated musical performances are often criticized for being unable to match the expressivity found in performances by humans. Two approaches have been often adopted to research into modelling expressive music performance on computers: (1) modelling patterns of deviations between a recorded human performance and the music score and (2) modelling the cognitive processes involved in a musical performance. Both approaches are valid and can complement each other. Leandro discussed the role of errors when modelling expressive music performance, which concerns the physical manipulation of the instrument by the performer. He also presented a study on the motor and biomechanical processes of the guitar performance. Some findings on the speed, precision, and force of a guitarist´s left-hand were presented.</li>
+	<li class="read-more-target" style="font-size:15px">One participant questioned the application of this research, suggesting the development of new musical instruments. Leandro revealed that this is a focus of his current research.</li>
+	<li class="read-more-target" style="font-size:15px">Article posted by Joseph Timoney</li>
+  </ul>
+  
+  <label for="post-5" class="read-more-trigger"></label>
+</div>
+
+  <h4></h4>
+    <div>
+  <input type="checkbox" class="read-more-state" id="post-6" />
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">AES Student Volunteers at AES Dublin</li>
+	<li style="font-size:15px"> 24TH APRIL 2019</li>
+	<li class="read-more-target" style="font-size:15px"><img src="AesStudentsVolunteers.jpg" style="max-width:100%"></li>
+    <li class="read-more-target" style="font-size:15px">Students from the University of York and Leeds Beckett University were part of the amazing team of student volunteers who supported the AES Convention in Dublin in March 2019.</li>
+    <li class="read-more-target" style="font-size:15px"><img src="ExciteYourEars.jpg" style="max-width:100%"></li>
+  </ul>
+  <label for="post-6" class="read-more-trigger"></label>
+</div>
+<h4></h4>
+  <div>
+  <input type="checkbox" class="read-more-state" id="post-7" />
+  <ul class="read-more-wrap">
+    <li style="font-size:30px">Quality Assessment for Compressed Ambisonic Audio</li>
+	<li style="font-size:15px">15TH FEBRUARY 2019</li>
+    <li class="read-more-target" style="font-size:15px">Meeting Topic: Quality Assessment for Compressed Ambisonic Audio</li>
+    <li class="read-more-target" style="font-size:15px">Moderator Name: Andrew Hines</li>
+	<li class="read-more-target" style="font-size:15px">Speaker Name: Dr. Andrew Hines</li>
+	<li class="read-more-target" style="font-size:15px">Other business or activities at the meeting: Election of Officers, Adoption of Section Laws, Meeting planning, Allocate roles and tasks, Sponsorship/Funding</li>
+	<li class="read-more-target" style="font-size:15px">Meeting Location: University College Dublin, Dublin, Ireland</li>
+	<li class="read-more-target" style="font-size:15px">Summary</li>
+	<li class="read-more-target" style="font-size:15px">Spatial audio with a high degree of sound quality and accurate localization is essential for creating a sense of immersion in a virtual environment. VR content creators can use spatial audio to attract the audiences attention in relation to their story or to guide the audience through a narrative in VR, relying on hearing something to focus our attention before we see it. Delivering spatial audio over networks requires efficient encoding techniques that could compress the raw audio content without compromising quality. Lossy compression schemes such as Opus typically reduce the amount of data to be sent by discarding some information. This discarded information can be important for ambisonic spatial audio in regards to listening quality or localization accuracy. Streaming service providers such as YouTube typically transcode uploaded content into various bit rates and need a perceptually relevant audio quality metric to monitor users’ perceived quality and spatial localization accuracy. This talk will present subjective listening test experiments that explore the effect of Opus codec compression on the quality as perceived by listeners. It will also introduce a full reference objective spatial audio quality metric, AMBIQUAL, which derives both listening quality and localization accuracy metrics directly from the spatial audio B-format ambisonic audio.</li>
+	<li class="read-more-target" style="font-size:15px">Article posted by Joseph Timoney</li>
+  </ul>
+  
+  <label for="post-7" class="read-more-trigger"></label>
+</div>
+
+  <h4></h4>
   </div>
 </div>
 <div class="bgimg-3"id="membership">
@@ -815,6 +1019,29 @@ function mobilecheck() {
   location.replace("https://eoghanbeaumont.github.io./mobile.html")
   }
 }
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function selectDivs(n){
+showDivs(slideIndex=n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
 </script>
 
 
