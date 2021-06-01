@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--mobile polices -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -78,13 +79,20 @@ body, html {
 
 .navbar a {
    float:left;
-  font-size: 16px;
+  font-size: 13px;
   color: white;
   padding: 13px 16px;
   text-decoration: none;
 }
 .navbar-right {
   float: right;
+}
+.navbar a.icon {
+  background: #003d99;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .dropdown {
   float: left;
@@ -156,33 +164,32 @@ body, html {
 </head>
 <html>
 <body>
+  <!-- Navbar-->
 <div class="navbar" id="navbar">
   <a href="#home" class="fa fa-home"></a>
-  <!-- Navigation links (hidden by default) -->
+    <!--Navbar buttons -->
   <div id="myLinks">
-    <a href="mobile.html#news">News</a>
-	<a href="mobile.html#about">About</a>
-    <a href="mobile.html#community">AES IRELAND SECTION</a>
-    <a href="mobile.html#volunteers">AES Ireland Volunteers</a>
-	<a href="mobile.html#past">AES Ireland Past Members</a>
-	<a href="mobile.html#events">Events</a>
-	<a href="mobile.html#membership">Membership</a>
-	<a href="mobile.html#students">Students</a>
-	<a href="mobile.html#groups">Groups</a>
-	<a href="#termsandconditions">Terms and Conditions</a>
-    <a href="#privacypolicy">Privacy Policy</a>
-    <a href="#cookiepolicy">Cookie Policy</a>
+    <a href="#news">News</a>
+	<a href="#about">About</a>
+    <a href="#community">AES IRELAND SECTION</a>
+    <a href="#volunteers">AES Ireland Volunteers</a>
+	<a href="#past">AES Ireland Past Members</a>
+	<a href="#events">Events</a>
+	<a href="#membership">Membership</a>
+	<a href="#students">Students</a>
+	<a href="#groups">Groups</a>
+	<a href="mobilepolicies.html#termsandconditions">Terms and Conditions</a>
+    <a href="mobilepolicies.html#privacypolicy">Privacy Policy</a>
+    <a href="mobilepolicies.html#cookiepolicy">Cookie Policy</a>
 	<a href="#contact">Contact</a>
 	<a href="https://www.aes.org/membership/ "target="_blank">Join AES</a>
 	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-twitter"></a>
 	<a href="https://www.facebook.com/aesuk" target="_blank" class="fa fa-facebook"></a>
   </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <div class="navbar-right">
+  <!-- Showmore javascript function-->
   <a href="javascript:void(0);" class="icon" onclick="showmore()">
     <i class="fa fa-bars"></i>
   </a>
-  </div>
 </div>
 <div class="bgimg-3"id="termsandconditions">
   <div class="caption">

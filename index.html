@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0060)https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm -->
+<!-- main page html-->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,6 +9,7 @@
 <body onload="mobilecheck()">
 <title>AES Ireland Section</title>
 <style>
+/*body*/ 
 body, html {
   height: 100%;
   margin: 0;
@@ -17,6 +18,7 @@ body, html {
   scroll-behavior: smooth;  
 }
 <style>
+/*Links*/ 
 a:link {
   color: black;
   text-decoration: underline;
@@ -37,6 +39,7 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+/*Mermber images*/ 
 .image{
 position: relative;
 left:50px;
@@ -54,7 +57,7 @@ max-width:100%;
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
-
+/*background images*/ 
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
   opacity: 0.90;
@@ -65,9 +68,11 @@ max-width:100%;
   z-index:0;
 
 }
+/*black lines*/ 
 h4{
 	border-bottom: 3px solid black;
 }
+/*ReadMore buttons*/ 
 .read-more-state {
   display: none;
   
@@ -119,6 +124,7 @@ h4{
  
 }
 }
+/*background images*/ 
 .bgimg-1 {
   background-image: url("audiostudio2.jpg");
   min-height: 100%;
@@ -133,7 +139,7 @@ h4{
   background-image: url("audiostudio2.jpg");
   min-height: 400px;
 }
-
+/*Captions in the background images*/ 
 .caption {
   position: absolute;
   left: 0;
@@ -168,7 +174,7 @@ h4{
   display: table;
   clear: both;
 }
-
+/*Navbar*/ 
 .bar {
   height: 40px;
   width: 100px;
@@ -206,6 +212,7 @@ h4{
 .navbar-right {
   float: right;
 }
+/*dropdown menu in navbar*/ 
 .dropdown {
   float: left;
   overflow: hidden;
@@ -262,7 +269,7 @@ ul {
   margin: 0;
   padding: 0;
 }																																																																																																																																	
- 
+ /*logos */
  .fa {
   font-size: 15px;
   text-align: center;
@@ -292,7 +299,7 @@ ul {
 .prev,.next{
   cursor: pointer;
   position: absolute;
-  top: 45%;
+  top:50%;
   color: white;
    background-color:transparent;
    border-style: none;
@@ -345,6 +352,23 @@ ul {
   width: 100%;
   text-align: center;
 }
+/*slideshow fade*/ 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
 
 p.outset {border-style: outset;}
 
@@ -361,6 +385,7 @@ p.outset {border-style: outset;}
 
 </head>
 <body>
+ <!-- Home code-->
 <div onscroll="myFunction()">
 <div id="home">
   <div style="position:relative; z-index: ;top:0px;color:black;background-color:white;4;font-size:15px;text-align:center;padding:20px 80px;text-align: justify;">
@@ -368,6 +393,7 @@ p.outset {border-style: outset;}
 	<p>This is the homepage of the Ireland Section of the Audio Engineering Society&#44; an international organisation dedicated to audio engineering. For more than sixty years, the Society has provided the industry with a framework and forum for the advancement of the science and art of audio.The Ireland Section is run voluntarily by the committee&#44; The Ireland section is one of  has the largest AES section outside the United States, with over nine hundred members.<p>
     </div>
 </div>
+ <!-- navbar -->
 <div class="bar"></div>
 
 <div class="navbar" id="navbar">
@@ -406,28 +432,30 @@ p.outset {border-style: outset;}
 			</div>
 		  
 </div>
+ <!-- news-->
 <div class="bgimg-2"id="news">
   <div class="caption">
   <span class="border">NEWS</span>
   </div>
 </div>
+ <!-- Slideshow -->
 <div style="position:relative;">
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <div class="slideshow-container">
-  <div class="mySlides">
-   <div class="Header">Blue test</div>
-  <img src="blue.png" style="width:100%">
-   <div class="text">blue</div>
+  <div class="mySlides fade">
+   <div class="Header">The Human Tuning Fork</div>
+  <img src="newstuningfork.jpg" style="width:100%">
+	<div class ="text">29TH FEBRUARY 2020</div>
   </div>
-  <div class="mySlides">
-   <div class="Header">Green test</div>
-  <img src="green.png" style="width:100%">
-   <div class="text">green</div>
+  <div class="mySlides fade">
+   <div class="Header">Auditory Perception</div>
+  <img src="AuditoryPerception.jpg" style="width:100%">
+   <div class="text">10TH JUNE 2019</div>
   </div>
-   <div class="mySlides">
-   <div class="Header">Red test</div>
-  <img src="red.jpg" style="width:100%">
-   <div class="text">red</div>
+   <div class="mySlides fade">
+   <div class="Header">Analysing expressive Musical Performances</div>
+  <img src="ExpressiveMusical.jpg" style="width:100%">
+   <div class="text">14TH MAY 2019</div>
   </div>
 
   <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
@@ -439,7 +467,7 @@ p.outset {border-style: outset;}
 </div>
   
 </div>
-
+ <!-- About-->
 <div class="bgimg-2"id="about">
   <div class="caption">
   <span class="border">ABOUT</span>
@@ -474,13 +502,13 @@ p.outset {border-style: outset;}
   </div>
 </div>
 
-
+ <!-- Community-->
 <div class="bgimg-2"id="community">
   <div class="caption">
   <span class="border">AES IRELAND SECTION</span>
   </div>
 </div>
-
+ <!-- Current members-->
 <div style="position:relative;">
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
 	<h1>AES Ireland Section Committee</h1>
@@ -488,7 +516,7 @@ p.outset {border-style: outset;}
 	<h4></h4>
 	<div class="row">
  <div class="column">
-	<img src="JoeTimoney.jpg" alt="Joe"style="margin-left:40%;max-width:100%">
+	<img src="JoeTimoney.jpg" alt="Joe"style="margin-left:50%;max-width:100%">
 	</div>
 	 <div class="column">
 	<img src="RokaiaJedir.jpg" alt="Rokaia" style="margin-left:200%;max-width:100%">
@@ -516,10 +544,10 @@ p.outset {border-style: outset;}
 	<h4></h4>
 		<div class="row">
  <div class="column">
-	 <img src ="MalachyRonan.jpg" alt="Malachy"style="margin-left:35%;max-width:100%" >
+	 <img src ="MalachyRonan.jpg" alt="Malachy"style="margin-left:55%;max-width:100%" >
 	</div>
 	 <div class="column">
-	<img src ="RonanODea.jpg" alt="Ronan" style="margin-left:160%;max-width:100%">
+	<img src ="RonanODea.jpg" alt="Ronan" style="margin-left:180%;max-width:100%">
 	</div>
 	<div class="column">
 	<img src="JoeFitzpatrick.png" alt="Joe" style="margin-left: 310%;max-width:100%">
@@ -527,7 +555,7 @@ p.outset {border-style: outset;}
 </div>
 	<div class="row">
 	 <div class="column">
-   	<p style="position: relative;left:60%;font-weight: bold;width:200%;">Malachy Ronan &#8208; Committe Member</p>
+   	<p style="position: relative;left:55%;font-weight: bold;width:200%;">Malachy Ronan &#8208; Committe Member</p>
 	<p style="width:200%" >Dr. Malachy Ronan is an Assistant Lecturer at the Limerick Institute of Technology. He holds MSc in Music Technology and PhD in Perception and Audio Engineering degrees from the University of Limerick. A member of the AES since 2014&#44; he has disseminated research at various AES outlets and is co-chair for student volunteers at AES 146. Current research interests include perception and signal processing.</p>
 	</div>
 	  <div class="column">
@@ -543,13 +571,13 @@ p.outset {border-style: outset;}
   <h4></h4>
   <div class ="row">
    <div class="column">
-	<img src ="PheobeSun.png" alt="Pheobe" style="margin-left:45%;max-width:100%">
+	<img src ="PheobeSun.png" alt="Pheobe" style="margin-left:55%;max-width:100%">
 	</div>
 	 <div class="column">
-	<img src ="FlaithriNeff.jpg" alt="FlaithriNeff" style="margin-left:170%;max-width:100%">
+	<img src ="FlaithriNeff.jpg" alt="FlaithriNeff" style="margin-left:175%;max-width:100%">
 	</div>
 	<div class="column">
-	<img src="elifarnhill.jpg" alt="eli" style="margin-left: 290%;max-width:100%">
+	<img src="elifarnhill.jpg" alt="eli" style="margin-left: 304%;max-width:100%">
 	</div>
 	</div>
   	<div class="row">
@@ -568,7 +596,7 @@ p.outset {border-style: outset;}
   </div>
   </div>
   <h4></h4>
-  <img src ="patrickmark.jpg" alt="Patrick" style="margin-left:10%;max-width:100%">
+  <img src ="patrickmark.jpg" alt="Patrick" style="margin-left:8%;max-width:100%">
   <div class="row">
    <div class="column">
    	<p style="position: relative;left:60%;font-weight: bold;width:200%;">Patrick mark &#8208; Committee Member</p>
@@ -598,6 +626,7 @@ p.outset {border-style: outset;}
 	</div>
 </div>
 </div>
+ <!-- Volunteers-->
 <div class="bgimg-2"id="volunteers">
   <div class="caption">
   <span class="border">AES IRELAND VOLUNTEERS</span>
@@ -617,6 +646,7 @@ p.outset {border-style: outset;}
 	<h4></h4>
 	 </div>
 </div>
+ <!-- past members -->
 <div class="bgimg-2"id="past">
   <div class="caption">
   <span class="border">AES PAST MEMBERS</span>
@@ -635,14 +665,14 @@ p.outset {border-style: outset;}
 	
 	</div>
 </div>
-
+ <!-- Events -->
 <div class="bgimg-3"id="events">
   <div class="caption">
   <span class="border">PAST EVENTS</span>
   
   </div>
 </div>
-
+ <!-- event infomation readmore-->
 <div style="position:relative;">
   <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
    <div>
@@ -804,6 +834,7 @@ Dave delivered an informal presentation and demonstration of a brainwave control
   <h4></h4>
   </div>
 </div>
+ <!-- membership -->
 <div class="bgimg-3"id="membership">
   <div class="caption">
   <span class="border">MEMBERSHIP
@@ -865,6 +896,7 @@ Dave delivered an informal presentation and demonstration of a brainwave control
 		
   </div>
 </div>
+ <!-- membership buttons -->
 <div class="row"> 
   <div class="column">
   <a href="http://www.airstudios.com/" target="_blank"><img src="sustainingmembers/air.png" class="image">
@@ -904,6 +936,7 @@ Dave delivered an informal presentation and demonstration of a brainwave control
   <a href="https://www.tannoy.com/" target="_blank"><img src="sustainingmembers/tannoy.png" class="image"></a>
   </div>
 </div>
+ <!-- Students -->
 <div class="bgimg-3"id="students">
   <div class="caption">
   <span class="border" >STUDENTS</span>
@@ -929,6 +962,7 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 
   </div>
 </div>
+ <!-- Groups -->
 <div class="bgimg-3"id="groups">
   <div class="caption">
   <span class="border">GROUPS</span>
@@ -978,7 +1012,7 @@ For details of student member benefits please go <a href="https://www.aes.org/st
 <script>
 
 window.onscroll = function() {myFunction()};
-
+ <!-- function to make sure navbar stays below the header but stays at top of screen when header is not on it-->
 var header = document.getElementById("navbar");
 var sticky = header.offsetTop;
 var logo= document.getElementById("homelogo");
@@ -992,16 +1026,18 @@ function myFunction() {
 	logo.classList.add("sticky");
   }
 }
+ <!-- function for navigation through the slides-->
 var slideIndex = 1;
 showDivs(slideIndex);
-
+ <!-- Adds or minus value from slideindex from corroposonding button-->
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
+ <!-- changes slideindex to dot value-->
 function sortDivs(n){
 showDivs(slideIndex=n);
 }
-
+ <!-- function for going through the slide-->
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -1012,6 +1048,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+ <!-- function to check if on mobile device-->
 function mobilecheck() {
   var x =screen.width;
   if(x<1000)
@@ -1019,26 +1056,7 @@ function mobilecheck() {
   location.replace("https://eoghanbeaumont.github.io./mobile.html")
   }
 }
-var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-function selectDivs(n){
-showDivs(slideIndex=n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
 
 
 
